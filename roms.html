@@ -1,0 +1,248 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2674214737169321"
+      crossorigin="anonymous"></script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A Biblioteca ROMs da Emuloteca: Encontre milhares de jogos clássicos para NES, SNES, Mega Drive, Game Boy e muitos outros consoles. Baixe e jogue com seu emulador.">
+
+    <title>Emuloteca: Biblioteca ROMs Clássicas</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marmelad&display=swap">
+</head>
+<body>
+    
+    <div id="sidebar-wrapper">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="imagens/logo2.png" alt="Emuloteca - Voltar para a página inicial" class="logo-image">
+            </a>
+            <h1 class="logo-text">Emuloteca</h1> 
+        </div>
+
+        <nav id="menu" aria-label="Menu principal">
+            <ul id="mainMenu" class="menu">
+                <li class="menu"><a href="index.html">🏠 Início</a></li>
+                <li class="menu"><a href="emuladores.html">🕹️ Emuladores</a></li>
+                <li class="menu active"><a href="roms.html" class="active">📚 Biblioteca ROMs</a></li>
+                <li class="menu"><a href="manuais-capas.html">📖 Manuais e Capas</a></li>
+                <li class="menu"><a href="guias.html">🔧 Guias e Tutoriais</a></li>
+                <li class="menu"><a href="traducoes.html">📝 Traduções</a></li>
+                <li class="menu"><a href="links.html">🌐 Links Úteis</a></li>
+                <li class="menu"><a href="contato.html">📧 Contato</a></li>
+                <li class="menu"><a href="sobre.html">ℹ️ Sobre Nós</a></li>
+            </ul>
+        </nav>
+        
+        </div>
+
+    <div id="main-wrapper">
+        <div id="main">
+            
+            <header class="page-header">
+                <img src="imagens/logo.png" alt="Logo Emuloteca: O Santuário da Emulação Clássica" class="main-logo-image">
+                <h1 style="margin-top: 10px;">Biblioteca de ROMs e Mídias</h1>
+                <p class="mainContent">
+                    A Biblioteca ROMs contém milhares de jogos para dezenas de sistemas clássicos. Nossas coleções são catalogadas para garantir a maior fidelidade possível aos jogos originais.
+                </p>
+                <p>
+                    Para jogá-los, você precisará de um emulador da nossa <a href="emuladores.html">Página de Emuladores</a>.
+                </p>
+            </header>
+
+            <div class="content-flex-container">
+                <main class="mainContent" style="flex: 2 1 600px;"> 
+                    
+                    <section id="filter-controls" class="sidebarUnit rounded" style="margin-bottom: 20px;">
+                        <h3>Filtrar Consoles:</h3>
+                        <div id="tag-buttons">
+                            <button class="filter-btn active" data-filter="all">Todos</button>
+                            <button class="filter-btn fixed" data-filter="fixed">Fixos</button>
+                            <button class="filter-btn portable" data-filter="portable">Portáteis</button>
+                            <button class="filter-btn nintendo" data-filter="nintendo">Nintendo</button>
+                            <button class="filter-btn sega" data-filter="sega">Sega</button>
+                            <button class="filter-btn sony" data-filter="sony">Sony</button>
+                            <button class="filter-btn atari" data-filter="atari">Atari</button>
+                        </div>
+                        <p id="no-results-message" style="display: none; color: #ff3333; margin-top: 10px; font-weight: bold;">Nenhum console corresponde ao filtro selecionado.</p>
+                    </section>
+                    <div id="console-lists-container" style="display:flex; justify-content:center; align-items:flex-start; flex-wrap:wrap; gap:20px; margin:auto">
+                        
+                        <table id="romsTableFixed" class="roms-list-table rounded">
+                            <caption>Consoles Fixos</caption>
+                            <tbody>
+                                <tr class="console-row" data-tags="fixed atari">
+                                    <td><a href="roms-atari2600.html">Atari 2600</a></td>
+                                    <td class="yearColumn"><span title="Lançamento: 1977">1977</span></td>
+                                </tr>
+                                <tr class="console-row" data-tags="fixed nintendo">
+                                    <td><a href="roms-nes.html">Nintendo (NES)</a></td>
+                                    <td class="yearColumn"><span title="Lançamento: 1983">1983</span></td>
+                                </tr>
+                                <tr class="console-row" data-tags="fixed sega">
+                                    <td><a href="roms-mastersystem.html">Master System</a></td>
+                                    <td class="yearColumn"><span title="Lançamento: 1985">1985</span></td>
+                                </tr>
+                                <tr class="console-row" data-tags="fixed sega">
+                                    <td><a href="roms-genesis.html">Genesis / Mega Drive</a></td> <td class="yearColumn"><span title="Lançamento: 1988">1988</span></td>
+                                </tr>
+                                <tr class="console-row" data-tags="fixed nintendo">
+                                    <td><a href="roms-snes.html">Super Nintendo</a></td> <td class="yearColumn"><span title="Lançamento: 1990">1990</span></td>
+                                </tr>
+                                <tr class="console-row" data-tags="fixed sony">
+                                    <td><a href="roms-ps1.html">PlayStation</a></td> <td class="yearColumn"><span title="Lançamento: 1994">1994</span></td>
+                                </tr>
+                                <tr class="console-row" data-tags="fixed nintendo">
+                                    <td><a href="roms-n64.html">Nintendo 64</a></td> <td class="yearColumn"><span title="Lançamento: 1996">1996</span></td>
+                                </tr>
+                                <tr class="console-row" data-tags="fixed sega">
+                                    <td><a href="#">Dreamcast</a></td> <td class="yearColumn"><span title="Lançamento: 1998">1998</span></td>
+                                </tr>
+                                <tr class="console-row" data-tags="fixed sony">
+                                    <td><a href="roms-ps2.html">PlayStation 2</a></td>
+                                    <td class="yearColumn"><span title="Lançamento: 2000">2000</span></td>
+                                </tr>
+                                <tr class="console-row" data-tags="fixed nintendo">
+                                    <td><a href="#">GameCube / Wii</a></td> <td class="yearColumn"><span title="Lançamento: 2001/2006">2001</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table id="romsTablePortable" class="roms-list-table rounded">
+                            <caption>Consoles Portáteis</caption>
+                            <tbody>
+                                <tr class="console-row" data-tags="portable nintendo">
+                                    <td><a href="#">Game Boy</a></td> <td class="yearColumn"><span title="Lançamento: 1989">1989</span></td>
+                                </tr>
+                                <tr class="console-row" data-tags="portable sega">
+                                    <td><a href="#">Game Gear</a></td> <td class="yearColumn"><span title="Lançamento: 1990">1990</span></td>
+                                </tr>
+                                <tr class="console-row" data-tags="portable nintendo">
+                                    <td><a href="roms-gbc.html">Game Boy Color</a></td> <td class="yearColumn"><span title="Lançamento: 1998">1998</span></td>
+                                </tr>
+                                <tr class="console-row" data-tags="portable nintendo">
+                                    <td><a href="roms-gba.html">Game Boy Advance</a></td> <td class="yearColumn"><span title="Lançamento: 2001">2001</span></td>
+                                </tr>
+                                <tr class="console-row" data-tags="portable nintendo">
+                                    <td><a href="#">Nintendo DS</a></td> <td class="yearColumn"><span title="Lançamento: 2004">2004</span></td>
+                                </tr>
+                                <tr class="console-row" data-tags="portable sony">
+                                    <td><a href="#">PlayStation Portable</a></td> <td class="yearColumn"><span title="Lançamento: 2004">2004</span></td>
+                                </tr>
+                                <tr class="console-row" data-tags="portable nintendo">
+                                    <td><a href="#">Nintendo 3DS</a></td> <td class="yearColumn"><span title="Lançamento: 2011">2011</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <form method="GET" action="#">
+                        <p style="text-align:center; padding-top: 15px; margin-bottom: 5px;">
+                            <input type="search" name="q" placeholder="Buscar um jogo..." style="width:270px; padding: 8px 10px; border: 1px solid var(--color-link); background: var(--color-menu-bg); color: var(--color-text); border-radius: 5px;" required> 
+                            <button type="submit" title="Buscar" class="menu-link-button" style="padding: 8px 12px; font-weight: normal;">&#128269;</button>
+                        </p>
+                        <p style="text-align:center; margin-top: 5px;">
+                            <a href="#">Busca Avançada</a>
+                        </p>
+                    </form>
+                    
+                    <p style="text-align:center; padding-top: 15px;">
+                        Não sabe o que fazer? Consulte nossos <a href="guias.html">Guias e Tutoriais</a>.
+                    </p>
+                </main>
+
+                <aside class="sidebarContainer" style="flex: 1 1 250px;">
+                    <div class="sidebarUnit rounded">
+                        <h3>O que são ROMs?</h3>
+                        <p>ROM (Read-Only Memory) é o arquivo digital do jogo que contém todos os dados do cartucho ou disco original. São esses arquivos que você carrega em seu emulador.</p>
+                        <p style="text-align: center; margin-top: 15px; margin-bottom: 0;">
+                            <a href="guias.html#roms" class="menu-link-button">Saiba mais</a>
+                        </p>
+                    </div>
+                </aside>
+            </div>
+            
+            <footer id="page-footer">
+                <div class="footer-links">
+                    <a href="sobre.html">Sobre</a> | 
+                    <a href="politica.html">Política de Privacidade</a> | 
+                    <a href="contato.html">Contato</a>
+                    <p style="margin-top: 10px; font-size: 80%; color: #888;">Criado por Jogadores. Para Jogadores. © 2025 Emuloteca. Todos os direitos reservados.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const tableContainers = document.querySelectorAll('.roms-list-table');
+        const noResultsMessage = document.getElementById('no-results-message');
+
+        function filterConsoles(filterTag) {
+            let anyRowVisible = false;
+
+            tableContainers.forEach(table => {
+                const rows = table.querySelectorAll('tbody tr');
+                let anyRowInTableVisible = false;
+
+                rows.forEach(row => {
+                    const rowTags = row.getAttribute('data-tags');
+                    let shouldShow = false;
+
+                    if (filterTag === 'all') {
+                        shouldShow = true;
+                    } 
+                    else if (rowTags && rowTags.includes(filterTag)) {
+                        shouldShow = true;
+                    }
+
+                    if (shouldShow) {
+                        row.style.display = 'table-row';
+                        anyRowInTableVisible = true;
+                        anyRowVisible = true;
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+
+                // Mostra ou esconde a tabela inteira (Consoles Fixos ou Portáteis)
+                // Se o filtro não for 'portable' e for 'fixed', só a primeira tabela deve aparecer, etc.
+                if (filterTag === 'fixed' && table.id === 'romsTablePortable') {
+                    table.style.display = 'none';
+                } else if (filterTag === 'portable' && table.id === 'romsTableFixed') {
+                    table.style.display = 'none';
+                } else if (anyRowInTableVisible) {
+                    table.style.display = 'table';
+                } else if (filterTag === 'all') {
+                     table.style.display = 'table'; // Garantir que ambas estejam visíveis no 'all'
+                } else {
+                    table.style.display = 'none';
+                }
+            });
+
+            if (anyRowVisible) {
+                noResultsMessage.style.display = 'none';
+            } else {
+                noResultsMessage.style.display = 'block';
+            }
+        }
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const filterTag = button.getAttribute('data-filter');
+                filterConsoles(filterTag);
+            });
+        });
+
+        filterConsoles('all');
+    </script>
+</body>
+</html>

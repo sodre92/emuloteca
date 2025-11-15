@@ -1,0 +1,635 @@
+/* Variáveis para esquema de cores (MANTIDO) */
+:root {
+    --color-background: #000025;
+    --color-menu-bg: #000035;
+    --color-text: #E0E0E0;
+    --color-link: #88BBEB;
+    --color-link-hover: #FFFFFF;
+    --color-border: #000045;
+    --color-highlight: #003366;
+}
+
+/* Estilos Globais e Reset (MANTIDO) */
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: 'Marmelad', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+}
+a {
+    color: var(--color-link);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover {
+    color: var(--color-link-hover);
+    text-decoration: underline;
+}
+
+/* Títulos (MANTIDO) */
+h2, h3, h4 {
+    color: var(--color-link);
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 5px;
+    margin-top: 30px; 
+    margin-bottom: 15px;
+}
+
+/* Container principal (MANTIDO) */
+#main-wrapper {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    /* Reduz o padding lateral em 5px para telas maiores */
+    padding: 20px 15px; 
+}
+#main {
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* --- Controle de Margens de Texto (MANTIDO) --- */
+
+p {
+    margin-top: 0;
+    margin-bottom: 20px;
+    /* OTIMIZAÇÃO: Melhoria da Leitura (Mobile Readability) */
+    /* Garante que o texto tenha uma altura de linha confortável, especialmente em telas menores */
+    line-height: 1.6; 
+}
+
+ul, ol {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    line-height: 1.6; /* Melhoria de leitura */
+}
+
+
+/* Barra de Navegação Lateral (Menu) (MANTIDO) */
+#sidebar-wrapper {
+    width: 220px;
+    flex-shrink: 0;
+    background-color: var(--color-menu-bg);
+    border-right: 2px solid var(--color-border);
+    display: flex; 
+    flex-direction: column;
+}
+
+.logo-container {
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+/* OTIMIZAÇÃO: Usa object-fit para evitar distorções em redimensionamentos */
+.logo-image {
+    max-width: 55%; 
+    height: auto; 
+    display: block;
+    margin: 0 auto;
+    object-fit: contain; 
+}
+.logo-text {
+    display: none;
+}
+
+/* Estilo da lista de links (MANTIDO) */
+#mainMenu {
+    list-style: none;
+    padding: 0;
+}
+.menu a {
+    display: block;
+    padding: 10px 15px;
+    color: var(--color-text);
+    font-size: 110%;
+    border-top: 1px solid var(--color-border);
+    text-decoration: none;
+}
+.menu a:hover {
+    background-color: #000055;
+    text-decoration: none;
+}
+.menu a.active {
+    background-color: var(--color-highlight);
+}
+
+/* Conteúdo Principal (MANTIDO) */
+.page-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px 0; /* Padding lateral removido, será controlado pelo main-wrapper */
+    border-bottom: 1px solid var(--color-border);
+}
+
+.page-header h2 {
+    font-size: 3em;
+    margin-bottom: 5px;
+    color: var(--color-link-hover);
+    border-bottom: none;
+}
+.page-header p {
+    font-style: italic;
+    color: var(--color-link);
+}
+.main-logo-image {
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+.content-flex-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+.mainContent {
+    flex: 1;
+    padding: 10px;
+    text-align: center; 
+}
+
+/* Sidebar (MANTIDO) */
+.sidebarContainer {
+    width: 250px;
+    flex-shrink: 0;
+    padding: 10px;
+}
+.sidebarUnit {
+    background-color: var(--color-menu-bg);
+    padding: 15px;
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+}
+.sidebarUnit h3 {
+    color: var(--color-link);
+    margin-top: 0;
+}
+
+/* OTIMIZAÇÃO: Estilos Comuns */
+.rounded {
+    border-radius: 5px;
+    /* Adiciona uma sombra suave para dar profundidade e melhorar a estética sem ser intrusivo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+}
+
+/* Estilos de Tabela (Links Principais/Destaques) (MANTIDO) */
+.classic-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0 40px 0;
+    background-color: var(--color-menu-bg);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Aplica sombra da classe .rounded */
+}
+.classic-table td {
+    padding: 10px 15px;
+    border: 1px solid var(--color-border);
+}
+/* OTIMIZAÇÃO: Mobile Tabela */
+.classic-table td:first-child {
+    font-weight: bold;
+    width: 35%; 
+    text-align: center;
+    /* Garantia de quebra de linha em mobile se o conteúdo for muito longo */
+    word-break: break-word;
+}
+
+/* Estilo de Notícia/Bloco de Destaque (MANTIDO) */
+.news-block {
+    margin-top: 20px;
+    background-color: var(--color-menu-bg);
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Aplica sombra da classe .rounded */
+}
+.dateCaption {
+    background-color: var(--color-highlight);
+    color: var(--color-text);
+    font-weight: bold;
+    padding: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: block; 
+}
+.news-block tr td {
+    padding: 15px;
+    line-height: 1.5;
+}
+
+/* Rodapé (MANTIDO) */
+#page-footer {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+}
+.footer-links {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-border);
+}
+.footer-links a {
+    margin: 0 10px;
+    font-size: 90%;
+    display: inline-block;
+    /* OTIMIZAÇÃO: Adiciona margem em mobile para links ficarem separados na quebra de linha */
+    margin-bottom: 5px; 
+}
+
+
+/* RESPONSIVIDADE APRIMORADA (Mobile-First) */
+@media (max-width: 900px) {
+    /* OTIMIZAÇÃO: Melhora a legibilidade do texto de cabeçalho em telas pequenas */
+    .page-header h2 {
+        font-size: 2em; /* Reduz o tamanho do título principal em mobile */
+    }
+
+    body {
+        flex-direction: column;
+    }
+    #sidebar-wrapper {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid var(--color-border);
+    }
+    #menu {
+        width: 100%;
+        padding: 0;
+    }
+    #mainMenu {
+        /* OTIMIZAÇÃO: Usa scroll horizontal para menus muito longos (em caso de muitos itens) */
+        display: flex;
+        flex-wrap: nowrap; /* Não quebra automaticamente */
+        overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
+        justify-content: flex-start; /* Alinha à esquerda no mobile */
+        padding-bottom: 5px;
+    }
+    .menu a {
+        border: none;
+        /* OTIMIZAÇÃO: Define largura mínima para evitar que itens encolham demais */
+        min-width: 100px; 
+        flex-grow: 0; /* Impede que ele estique, deixando a rolagem acontecer */
+        flex-shrink: 0; /* Impede que ele encolha */
+        text-align: center;
+        padding: 8px 10px;
+    }
+    .content-flex-container {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 10px;
+        gap: 0; /* Remove gap para usar margens padronizadas */
+    }
+    .mainContent {
+        width: 100%;
+        padding: 10px 0; /* Adiciona padding vertical, remove lateral */
+        text-align: left; /* OTIMIZAÇÃO: Texto centralizado em mobile dificulta a leitura. Alinhado à esquerda é melhor. */
+    }
+    .sidebarContainer {
+        width: 100%;
+        padding: 0 10px; /* Garante que a sidebar tenha padding lateral após ser movida */
+        margin-top: 20px;
+    }
+    /* OTIMIZAÇÃO: Reduz margem superior em h3 em mobile para economizar espaço */
+    h3 {
+        margin-top: 20px;
+    }
+    /* OTIMIZAÇÃO: Garantir que a imagem principal não ultrapasse a tela */
+    .main-logo-image {
+        max-width: 90%;
+    }
+    /* OTIMIZAÇÃO: Ajuste de padding/margin da Tabela Clássica */
+    .classic-table {
+        margin: 10px 0 20px 0;
+    }
+    .classic-table td:first-child {
+        width: 45%; /* Aumenta a largura da primeira coluna em mobile para facilitar o toque */
+    }
+}
+
+/* OTIMIZAÇÃO: @media para telas muito pequenas */
+/* Ajuste fino para telefones menores */
+@media (max-width: 500px) {
+    #main-wrapper {
+        padding: 10px 5px; /* Reduz ainda mais o padding lateral */
+    }
+    .menu a {
+        min-width: 80px; /* Reduz a largura mínima dos itens do menu */
+    }
+    .mainContent {
+        padding: 5px 0;
+    }
+}
+
+
+/* --- Estilos Adicionais (MANTIDO) --- */
+
+caption {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #FFFF99;
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    text-align: center; 
+}
+.year {
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    font-size: 0.8em;
+    color: var(--color-link);
+}
+.emulator-table {
+    width: 100%;
+    max-width: 750px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: var(--color-menu-bg);
+}
+.emulator-table th, .emulator-table td {
+    padding: 10px;
+    border: 1px solid var(--color-border);
+    text-align: center;
+}
+.emulator-table th {
+    font-size: 90%;
+    background-color: var(--color-highlight);
+    color: var(--color-text);
+}
+.platform-icon {
+    font-size: 20px;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: help;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+.platform-icon:hover {
+    opacity: 1;
+}
+.menu-link-button {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: var(--color-highlight);
+    color: var(--color-link-hover);
+    border-radius: 4px;
+    border: 1px solid var(--color-link);
+    text-decoration: none;
+    font-weight: bold;
+}
+.menu-link-button:hover {
+    background-color: #004488;
+    text-decoration: none;
+}
+.roms-list-table {
+    width: 100%;
+    max-width: 350px;
+    border-collapse: collapse;
+    background-color: var(--color-menu-bg);
+}
+.roms-list-table caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--color-link);
+    padding: 10px 0;
+}
+.roms-list-table tr td {
+    padding: 8px 15px;
+    border: 1px solid var(--color-border);
+}
+.roms-list-table a {
+    font-weight: bold;
+    display: block;
+}
+.yearColumn {
+    font-size: 0.9em;
+    padding-left: 10px;
+    text-align: right;
+    width: 50px;
+}
+.yearColumn span[title] {
+    cursor: help;
+}
+.manual-list-table {
+    width: 100%;
+    max-width: 450px;
+    border-collapse: collapse;
+    background-color: var(--color-menu-bg);
+    margin-bottom: 20px;
+}
+.manual-list-table caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #FFFF99;
+    padding: 10px 0;
+}
+.manual-list-table th, .manual-list-table td {
+    padding: 8px 10px;
+    border: 1px solid var(--color-border);
+    text-align: left;
+}
+.manual-list-table th {
+    background-color: var(--color-highlight);
+    color: var(--color-text);
+    font-size: 90%;
+}
+.manual-list-table a {
+    font-weight: bold;
+}
+.manual-count {
+    padding-right: 10px;
+    text-align: right;
+    font-weight: bold;
+    width: 60px;
+}
+.manual-list-table.striped tr:nth-child(even) {
+    background-color: #000040;
+}
+.manual-list-table.latest-additions th:nth-child(2),
+.manual-list-table.latest-additions td:nth-child(2) {
+    text-align: left;
+}
+.manual-list-table.latest-additions th:nth-child(1),
+.manual-list-table.latest-additions td:nth-child(1) {
+    text-align: center;
+    width: 70px;
+}
+.linkTable {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--color-menu-bg);
+    margin-bottom: 20px;
+}
+.linkTable caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #FFFF99;
+    padding: 10px 0;
+}
+.linkTable td {
+    padding: 8px 10px;
+    border: 1px solid var(--color-border);
+    /* OTIMIZAÇÃO: Garantia de quebra de palavra em links longos para evitar overflow */
+    word-wrap: break-word;
+}
+.linkTable td:first-child {
+    font-weight: bold;
+}
+.link-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #000040;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+}
+.link-form .form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.link-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--color-text);
+}
+.link-form input[type="text"], 
+.link-form input[type="url"], 
+.link-form textarea, 
+.link-form select {
+    padding: 10px;
+    border: 1px solid #111;
+    border-radius: 4px;
+    background-color: #000001;
+    color: var(--color-text);
+    font-size: 1em;
+}
+.link-form textarea {
+    resize: vertical;
+}
+.link-form button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--color-highlight);
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.link-form button[type="submit"]:hover {
+    background-color: #ff6600;
+}
+.logo-image {
+    width: 180px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+    padding: 5px;
+}
+.logo-container {
+    padding: 10px 0;
+}
+.badge {
+    display: inline-block;
+    padding: 3px 8px;
+    margin: 0 5px 5px 0;
+    border-radius: 4px;
+    font-size: 0.7em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #FFF;
+    text-decoration: none;
+    line-height: 1;
+    cursor: default;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+.badge.nes, .badge.nintendo {
+    background-color: #ff3333;
+}
+.badge.snes {
+    background-color: #007bff;
+}
+.badge.megadrive, .badge.sega {
+    background-color: #008000;
+}
+.badge.ps1, .badge.sony {
+    background-color: #333399;
+}
+.badge.n64 {
+    background-color: #8b008b;
+}
+.badge.atari {
+    background-color: #f7a01d;
+}
+.badge.gb {
+    background-color: #8fbc8f;
+    color: #333;
+}
+.badge.rpg {
+    background-color: #8b008b;
+}
+.badge.platform {
+    background-color: #ffa500;
+}
+body::after {
+    content: '';
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.1) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    opacity: 0.8;
+    z-index: 9999;
+}
+#tag-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    padding: 10px 0;
+}
+.filter-btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #333;
+    color: #FFF;
+    font-weight: 500;
+    transition: background-color 0.2s, transform 0.1s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.filter-btn:hover {
+    background-color: #555;
+    transform: translateY(-1px);
+}
+.filter-btn.active {
+    background-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    font-weight: bold;
+}
+
+/* --- Edição de Erro no Destaque --- */
+
+#featured-article {
+    /* Corrigido: Esta regra estava com valor -200px, causando um erro de sobreposição. 
+       Mantenho sem margem superior explícita aqui para usar o fluxo normal do conteúdo. */
+}
+
+/* Fim do CSS Otimizado. */

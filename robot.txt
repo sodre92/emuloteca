@@ -1,0 +1,20 @@
+# User-agent: * aplica as regras a todos os robôs
+User-agent: *
+Allow: /
+
+# Exclui arquivos e diretórios que não devem ser indexados (pastas de trabalho, dados privados)
+Disallow: /admin/
+Disallow: /temp/
+Disallow: /backups/
+
+# Configurações específicas para o Googlebot (o mais importante)
+User-agent: Googlebot
+Allow: /
+
+# Exemplo de como você pode tentar bloquear o rastreamento de ROMs
+# Embora o Googlebot não indexe arquivos .zip, esta linha previne o rastreamento desnecessário
+# Disallow: /*.zip$
+# Disallow: /roms/
+
+# Localização do seu Mapa do Site (Essencial para SEO)
+Sitemap: https://sodre92.github.io/emuloteca/sitemap.xml 

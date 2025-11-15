@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Guias e Tutoriais | Retro Lair: O Santuário da Emulação Clássica</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marmelad&display=swap">
+</head>
+<body>
+    
+    <div id="sidebar-wrapper">
+        <header id="sidebar-header">
+            <div class="menu-segment logo-container">
+                <a href="index.html">
+                    <img src="imagens/logo2.png" class="logo-image">
+                </a>
+            </div>
+        </header>
+
+        <nav id="menu" aria-label="Menu principal">
+            <ul id="mainMenu" class="menu">
+                <li><a href="emuladores.html">Emuladores</a></li>
+                <li><a href="roms.html">Biblioteca ROMs</a></li>
+                <li><a href="guias.html" class="active">Guias e Tutoriais</a></li>
+                <li><a href="traducoes.html">Traduções</a></li>
+                <li><a href="links.html">Links Úteis</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="main-wrapper">
+        <div id="main">
+            
+            <header class="page-header">
+                <img src="imagens/logo.png" alt="Logo Emuloteca" class="main-logo-image">
+                <p>Configurações, dicas avançadas e desafios para a comunidade.</p>
+            </header>
+
+            <div class="content-flex-container">
+                <main class="mainContent">
+                    
+                    <section id="intro-guias" class="info-block">
+                        <h3>Dicas para o Emulador Perfeito</h3>
+                        <p>
+                            Nesta secção, encontrará tutoriais detalhados para configurar os emuladores mais populares, resolver problemas comuns e otimizar a sua experiência de *retro-gaming*.
+                        </p>
+                    </section>
+                    
+                    <section id="retroachievements-guide" class="info-block">
+                        <h3 style="color: #ff8c00;">RetroAchievements: Troféus nos Clássicos</h3>
+                        
+                        <p>
+                            O **RetroAchievements** é uma plataforma incrível que adiciona um sistema de conquistas (troféus) a milhares de jogos retrô. É a maneira perfeita de revisitar seus clássicos favoritos com um novo desafio!
+                        </p>
+
+                        <div class="guide-steps">
+                            <h4>1. Cadastro e Login</h4>
+                            <p>O primeiro passo é criar uma conta gratuita no site oficial: <a href="https://retroachievements.org/" target="_blank">retroachievements.org</a>. Guarde bem o seu nome de utilizador e a senha.</p>
+                            
+                            <h4>2. Emulador Compatível (Recomendação: RetroArch)</h4>
+                            <p>A maioria dos emuladores avançados suporta o sistema, mas recomendamos usar o **RetroArch** pela sua compatibilidade robusta com o sistema de conquistas.</p>
+                            <p class="step-detail">
+                                **Configuração no RetroArch:**
+                                <ul>
+                                    <li>Vá para **Settings** > **Achievements**.</li>
+                                    <li>Ative a opção **Achievements** (ligar/ON).</li>
+                                    <li>Insira o seu **Username** e **Password** da conta RetroAchievements.</li>
+                                    <li>Mantenha-se conectado à Internet enquanto joga!</li>
+                                </ul>
+                            </p>
+                            
+                            <h4>3. O Desafio Hardcore</h4>
+                            <p>Para obter a pontuação e *badges* mais altas, jogue no **Modo Hardcore**. Este modo:</p>
+                            <p class="step-detail">
+                                <ul>
+                                    <li>**Desativa** o uso de *Save States* (salvamento rápido do emulador).</li>
+                                    <li>**Desativa** a função *Rewind* (voltar no tempo).</li>
+                                </ul>
+                                É o verdadeiro desafio raiz, simulando a experiência do console original!
+                            </p>
+
+                            <h4>4. Compatibilidade das ROMs</h4>
+                            <p>Para garantir que as conquistas funcionem, o jogo deve ser reconhecido pelo sistema. Geralmente, as ROMs com o padrão **No-Intro** (versão Americana/Global) funcionam melhor. Se uma ROM não for reconhecida, tente outra versão ou verifique a página do jogo no site do RetroAchievements.</p>
+                        </div>
+                    </section>
+                    
+                    <section id="outros-guias" class="info-block" style="margin-top: 30px;">
+                        <h3>Outros Tutoriais Futuros</h3>
+                        <p>Esta secção será expandida em breve com guias sobre:</p>
+                        <ul style="list-style-type: disc; margin-left: 20px;">
+                            <li>Otimização de Vídeo (Filtros CRT e Shaders)</li>
+                            <li>Mapeamento de Comandos USB</li>
+                            <li>Instalação de Patches de Tradução</li>
+                        </ul>
+                    </section>
+                    
+                </main>
+
+                <aside class="sidebarContainer">
+                    <div class="sidebarUnit rounded">
+                        <h3>Destaque Retrô</h3>
+                        <p>O console da semana: Super Nintendo (SNES). Qual seu jogo favorito?</p>
+                        <div style="text-align: center; margin-top: 15px;">
+                            <a href="/roms/snes" class="menu-link-button">Ver ROMs SNES</a>
+                        </div>
+                    </div>
+
+                    <div class="sidebarUnit rounded" style="margin-top: 20px;">
+                        <h3>Pixel-Fala</h3>
+                        <div id="retro-quote-container" style="text-align: center; padding: 10px;">
+                            <p id="randomQuote" style="font-style: italic; color: #ff8c00; font-size: 1.1em;">
+                                Carregando citação...
+                            </p>
+                            <p id="quoteSource" style="font-size: 0.8em; margin-top: 5px; color: #aaa;">
+                               
+                            </p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+            
+            <footer id="page-footer">
+                <div class="footer-links">
+                    <a href="/politica">Política de Privacidade</a>
+                    <p style="margin-top: 10px; color: #666; font-size: 0.8em;">&copy; 2025 Emuloteca</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+    
+    </body>
+</html>
