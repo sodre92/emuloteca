@@ -1,0 +1,287 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2674214737169321"
+      crossorigin="anonymous"></script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="description" content="Guia avançado sobre BIOS: Entenda o que são, por que são necessários e como instalar os arquivos BIOS para emuladores de PS1 (DuckStation), PS2 (PCSX2) e outros consoles de 5ª e 6ª geração.">
+    
+    <title>Guia Avançado: Instalação de Arquivos BIOS (PS1, PS2) | Emuloteca</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marmelad&display=swap">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    
+    <button id="menu-toggle" aria-controls="sidebar-wrapper" aria-expanded="false" class="menu-toggle-button">
+        ☰ Menu
+    </button>
+
+    <div id="sidebar-wrapper">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="imagens/logo2.png" alt="Emuloteca - Voltar para a página inicial" class="logo-image">
+            </a>
+            <h1 class="logo-text">Emuloteca</h1> 
+        </div>
+
+        <nav id="menu" aria-label="Menu principal">
+            <ul id="mainMenu" class="menu">
+                <li class="menu"><a href="index.html">🏠 Início</a></li>
+                <li class="menu"><a href="emuladores.html">🕹️ Emuladores</a></li>
+                <li class="menu"><a href="roms.html">📚 Biblioteca ROMs</a></li>
+                <li class="menu"><a href="manuais-capas.html">📖 Manuais e Capas</a></li>
+                <li class="menu"><a href="guias.html" class="active">🔧 Guias e Tutoriais</a></li> 
+                <li class="menu"><a href="traducoes.html">📝 Traduções</a></li>
+                <li class="menu"><a href="links.html">🌐 Links Úteis</a></li>
+            </ul>
+        </nav>
+        
+        <nav id="subMenu" aria-label="Navegação Rápida do Guia" class="sidebarUnit rounded" style="margin-top: 20px;">
+            <h3>Navegação Rápida</h3>
+            <ul class="submenu-list">
+                <li><a href="#o-que-e">1. O que é o BIOS?</a></li>
+                <li><a href="#legalidade">2. Legalidade e Busca</a></li>
+                <li><a href="#localizacao">3. Localização dos Arquivos</a></li>
+                <li><a href="#ps1">4. Guia PS1/DuckStation</a></li>
+                <li><a href="#ps2">5. Guia PS2/PCSX2</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="main-wrapper">
+        <div id="main">
+            
+            <header class="page-header">
+                <img src="imagens/logo.png" alt="Guia de Instalação de Arquivos BIOS" class="main-logo-image">
+                <h1 style="margin-top: 10px;">[Guia Avançado] Instalação de Arquivos BIOS (PS1, PS2 e Outros)</h1>
+                <p>
+                    Alguns consoles mais complexos (como PS1, PS2, Sega Saturn) exigem um arquivo chamado BIOS para funcionar. Este guia explica o que é o BIOS e como configurá-lo corretamente no seu emulador.
+                </p>
+                <div class="note-box" style="margin-top: 20px;">
+                    **Você veio do guia iniciante?** Se ainda não instalou o RetroArch, comece aqui: <a href="guia-inicial-retroarch.html">Primeiros Passos na Emulação</a>.
+                </div>
+            </header>
+            
+            <div class="content-flex-container">
+                <main class="mainContent" style="flex: 2 1 600px;">
+                    
+                    <section id="o-que-e" class="fade-in-element">
+                        <h2 style="border-bottom: 2px solid var(--color-link);">1. O Que Exatamente é o Arquivo BIOS?</h2>
+                        
+                        <p>BIOS (Basic Input/Output System) é um software proprietário, gravado em um chip do console original. Ele é o primeiro programa que o console executa ao ser ligado. É responsável por:</p>
+                        <ul>
+                            <li>**Inicializar o Hardware:** Verificar memória, processador e outros componentes.</li>
+                            <li>**Carregar o Sistema Operacional:** É o BIOS que exibe a tela inicial do PlayStation ou o menu do Saturn.</li>
+                        </ul>
+                        <p>Como o BIOS é um software de propriedade da Sony, Sega, etc., ele **não pode ser distribuído** legalmente junto com os emuladores. Sem ele, o emulador não consegue simular 100% o ambiente do console, e os jogos não carregam.</p>
+                    </section>
+                    
+                    <hr style="margin: 40px 0; border-color: #333;">
+
+                    <section id="legalidade" class="fade-in-element">
+                        <h2 style="border-bottom: 2px solid var(--color-link);">2. Legalidade e Como Encontrar os Arquivos</h2>
+                        
+                        <p>Na maioria das jurisdições, a única maneira **legal** de obter os arquivos BIOS é **dumpá-los** (extrair) do seu próprio console de videogame original. Isso requer hardware e conhecimento avançado.</p>
+                        
+                        <div class="note-box alert">
+                            **ATENÇÃO:** A Emuloteca não pode fornecer links diretos para downloads de arquivos BIOS, pois eles são protegidos por direitos autorais.
+                        </div>
+
+                        <p>No entanto, a comunidade de emulação global possui esses arquivos. A melhor forma de procurá-los é usando os nomes dos arquivos específicos (listados abaixo) em um motor de busca de sua preferência.</p>
+                    </section>
+                    
+                    <hr style="margin: 40px 0; border-color: #333;">
+                    
+                    <section id="localizacao" class="fade-in-element">
+                        <h2 style="border-bottom: 2px solid var(--color-link);">3. Localização Padrão dos Arquivos</h2>
+                        
+                        <p>Quase todos os emuladores e interfaces utilizam a mesma pasta para armazenar os arquivos BIOS.</p>
+                        
+                        <h3>A. RetroArch</h3>
+                        <p>Se você estiver usando o RetroArch, os arquivos BIOS devem ser colocados na pasta **`system`**.</p>
+                        <p>O caminho exato varia, mas geralmente está em:</p>
+                        <pre><code>[Pasta de Instalação do RetroArch] \ system \</code></pre>
+                        
+                        <h3>B. Emuladores Standalone (PCSX2, DuckStation)</h3>
+                        <p>Esses emuladores geralmente criam uma pasta chamada **`bios`** ou **`system`** em seu diretório principal. Se você não encontrar, o próprio emulador perguntará a localização na primeira inicialização.</p>
+                    </section>
+
+                    <hr style="margin: 40px 0; border-color: #333;">
+                    
+                    <section id="ps1" class="fade-in-element">
+                        <h2 style="border-bottom: 2px solid var(--color-link);">4. Guia Específico: PlayStation 1 (PS1)</h2>
+                        
+                        <p>O PS1 exige um arquivo BIOS. Recomenda-se ter as BIOS de todas as regiões para garantir a máxima compatibilidade, especialmente com jogos traduzidos.</p>
+
+                        <div class="table-container">
+                            <table class="data-table">
+                                <thead>
+                                    <tr>
+                                        <th>Região</th>
+                                        <th>Nome Comum do Arquivo</th>
+                                        <th>Comentários</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>**EUA (NTSC)**</td>
+                                        <td>`scph5501.bin`</td>
+                                        <td>Essencial para a maioria dos jogos americanos.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>**Europa (PAL)**</td>
+                                        <td>`scph5502.bin`</td>
+                                        <td>Necessário para jogos europeus.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>**Japão (NTSC-J)**</td>
+                                        <td>`scph5500.bin`</td>
+                                        <td>Para jogos japoneses originais.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <p>Basta colocar todos os arquivos **`.bin`** que você encontrar (com esses nomes) dentro da pasta **`system`** do RetroArch, ou na pasta **`bios`** do DuckStation/ePSXe.</p>
+                    </section>
+                    
+                    <hr style="margin: 40px 0; border-color: #333;">
+                    
+                    <section id="ps2" class="fade-in-element">
+                        <h2 style="border-bottom: 2px solid var(--color-link);">5. Guia Específico: PlayStation 2 (PS2)</h2>
+                        
+                        <p>O emulador **PCSX2** é o padrão para PS2 e ele exige um arquivo de BIOS. Devido à variedade de modelos do PS2, existem muitas versões de BIOS.</p>
+                        
+                        <ol>
+                            <li>
+                                **Nome do Arquivo:** Os arquivos de BIOS do PS2 costumam seguir um padrão como: `SCPH-70012.BIN` ou `ps2-0230a-20080220.bin`.
+                            </li>
+                            <li>
+                                **Localização:** Crie uma pasta chamada **`bios`** dentro do diretório do PCSX2 e coloque os arquivos **`.bin`** lá.
+                            </li>
+                            <li>
+                                **Configuração no PCSX2:**
+                                <ul>
+                                    <li>Abra o PCSX2.</li>
+                                    <li>Vá em **Configurações > BIOS**.</li>
+                                    <li>Clique em **Procurar** e selecione a pasta **`bios`** que você criou.</li>
+                                    <li>A lista de BIOS deve ser preenchida. Escolha uma versão americana recente (2006 em diante) para melhor compatibilidade com a maioria dos jogos.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                        <div class="note-box">
+                            **Dica:** Arquivos de BIOS mais recentes (com data do ano 2000 em diante) geralmente oferecem melhor compatibilidade e desempenho.
+                        </div>
+                    </section>
+                </main>
+
+                <aside class="sidebarContainer" style="flex: 1 1 250px;">
+                    <div class="sidebarUnit rounded">
+                        <h3>O que é um Core?</h3>
+                        <p>No RetroArch, o "Core" é o emulador de fato. Se você instalou o `Snes9x` no guia anterior, você instalou o Core do SNES. O BIOS é um arquivo de sistema que o Core precisa para funcionar.</p>
+                        <p style="text-align: center; margin-top: 15px; margin-bottom: 0;">
+                            <a href="emuladores.html" class="menu-link-button">Lista de Emuladores</a>
+                        </p>
+                    </div>
+                    
+                    <div class="sidebarUnit rounded" style="margin-top: 20px;">
+                        <h3>Frase do Cartucho</h3>
+                        <div id="retro-quote-container" style="text-align: center; padding: 10px;">
+                            <p id="randomQuote" style="font-style: italic; color: #ff8c00; font-size: 1.1em;">
+                                Carregando citação...
+                            </p>
+                            <p id="quoteSource" style="font-size: 0.8em; margin-top: 5px; color: #aaa;">
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="sidebarUnit rounded" style="margin-top: 20px;">
+                        <h3>ROMs e ISOs</h3>
+                        <p>Depois de configurar o BIOS, você precisará dos arquivos de jogo para PS1 (ISO/BIN/CUE) ou PS2 (ISO/DVD). Eles devem ser colocados em pastas separadas.</p>
+                        <ul class="submenu-list">
+                            <li><a href="roms-ps1.html">Jogos de PS1</a></li>
+                            <li><a href="roms-ps2.html">Jogos de PS2</a></li>
+                        </ul>
+                    </aside>
+                </aside>
+            </div>
+            
+            <footer id="page-footer">
+                <div class="footer-links">
+                    <a href="sobre.html">Sobre</a> | 
+                    <a href="politica.html">Política de Privacidade</a> | 
+                    <a href="contato.html">Contato</a>
+                    <p style="margin-top: 10px; font-size: 80%; color: #888;">Criado por Jogadores. Para Jogadores. © 2025 Emuloteca. Todos os direitos reservados.</p>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // Implementação do Menu Toggle (Mobile)
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const sidebar = document.getElementById('sidebar-wrapper');
+            const mainWrapper = document.getElementById('main-wrapper');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true' || false;
+            
+            this.setAttribute('aria-expanded', !isExpanded);
+            sidebar.classList.toggle('open');
+            mainWrapper.classList.toggle('pushed');
+        });
+
+        // ===================================
+        // ANIMAÇÃO FADE-IN ON SCROLL
+        // ===================================
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, {
+            threshold: 0.2 // O elemento precisa estar 20% visível para disparar
+        });
+
+        document.querySelectorAll('.fade-in-element').forEach(element => {
+            observer.observe(element);
+        });
+
+        // ===================================
+        // CITAÇÕES RETRÔ
+        // ===================================
+        const retroQuotes = [
+            { quote: "It's dangerous to go alone! Take this.", source: "The Legend of Zelda (NES)" },
+            { quote: "All your base are belong to us.", source: "Zero Wing (Mega Drive)" },
+            { quote: "Finish Him!", source: "Mortal Kombat (Arcade)" },
+            { quote: "A winner is you!", source: "Pro Wrestling (NES)" },
+            { quote: "Do a barrel roll!", source: "Star Fox 64 (N64)" },
+            { quote: "War. War never changes.", source: "Fallout (PC)" },
+            { quote: "Snaaake! Snaaake!", source: "Metal Gear Solid (PS1)" },
+            { quote: "Thank you, Mario! But our princess is in another castle!", source: "Super Mario Bros. (NES)" },
+            { quote: "Get over here!", source: "Mortal Kombat (Arcade/Multi)" },
+            { quote: "I am Error.", source: "Zelda II: The Adventure of Link (NES)" },
+        ];
+
+        function displayRandomQuote() {
+            const randomIndex = Math.floor(Math.random() * retroQuotes.length);
+            const randomQuote = retroQuotes[randomIndex];
+            const quoteElement = document.getElementById('randomQuote');
+            const sourceElement = document.getElementById('quoteSource');
+
+            if (quoteElement && sourceElement) {
+                quoteElement.textContent = randomQuote.quote;
+                sourceElement.textContent = "— " + randomQuote.source;
+            }
+        }
+        displayRandomQuote();
+    </script>
+</body>
+</html>

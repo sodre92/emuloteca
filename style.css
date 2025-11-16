@@ -7,6 +7,9 @@
     --color-link-hover: #FFFFFF;
     --color-border: #000045;
     --color-highlight: #003366;
+    /* Adicionada uma variável para a cor de fundo da sidebar, usando a mesma do menu */
+    --color-sidebar-bg: var(--color-menu-bg); 
+    --color-primary: #000025; /* Usada como cor principal/de fundo no botão do menu */
 }
 
 /* Estilos Globais e Reset (MANTIDO) */
@@ -22,7 +25,7 @@ body {
 a {
     color: var(--color-link);
     text-decoration: none;
-    transition: color 0.2s;
+    /* REMOVIDO: A transição de cor de 0.2s aqui foi substituída pela regra mais abrangente no final */
 }
 a:hover {
     color: var(--color-link-hover);
@@ -43,8 +46,9 @@ h2, h3, h4 {
     flex-grow: 1;
     display: flex;
     justify-content: center;
-    /* Reduz o padding lateral em 5px para telas maiores */
     padding: 20px 15px; 
+    /* Adicionado para transição suave quando o menu mobile empurra o conteúdo */
+    transition: margin-left 0.3s;
 }
 #main {
     max-width: 1200px;
@@ -56,15 +60,13 @@ h2, h3, h4 {
 p {
     margin-top: 0;
     margin-bottom: 20px;
-    /* OTIMIZAÇÃO: Melhoria da Leitura (Mobile Readability) */
-    /* Garante que o texto tenha uma altura de linha confortável, especialmente em telas menores */
     line-height: 1.6; 
 }
 
 ul, ol {
     margin-top: 10px;
     margin-bottom: 20px;
-    line-height: 1.6; /* Melhoria de leitura */
+    line-height: 1.6;
 }
 
 
@@ -83,7 +85,6 @@ ul, ol {
     padding: 10px 0;
     margin-bottom: 10px;
 }
-/* OTIMIZAÇÃO: Usa object-fit para evitar distorções em redimensionamentos */
 .logo-image {
     max-width: 55%; 
     height: auto; 
@@ -107,6 +108,7 @@ ul, ol {
     font-size: 110%;
     border-top: 1px solid var(--color-border);
     text-decoration: none;
+    /* REMOVIDO: A transição aqui foi substituída pela regra mais abrangente no final */
 }
 .menu a:hover {
     background-color: #000055;
@@ -114,13 +116,14 @@ ul, ol {
 }
 .menu a.active {
     background-color: var(--color-highlight);
+    /* REMOVIDO: O estilo ativo é sobrescrito pela nova regra de transição no final */
 }
 
 /* Conteúdo Principal (MANTIDO) */
 .page-header {
     text-align: center;
     margin-bottom: 30px;
-    padding: 20px 0; /* Padding lateral removido, será controlado pelo main-wrapper */
+    padding: 20px 0;
     border-bottom: 1px solid var(--color-border);
 }
 
@@ -171,7 +174,6 @@ ul, ol {
 /* OTIMIZAÇÃO: Estilos Comuns */
 .rounded {
     border-radius: 5px;
-    /* Adiciona uma sombra suave para dar profundidade e melhorar a estética sem ser intrusivo */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
 }
 
@@ -182,18 +184,16 @@ ul, ol {
     margin: 20px 0 40px 0;
     background-color: var(--color-menu-bg);
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Aplica sombra da classe .rounded */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 .classic-table td {
     padding: 10px 15px;
     border: 1px solid var(--color-border);
 }
-/* OTIMIZAÇÃO: Mobile Tabela */
 .classic-table td:first-child {
     font-weight: bold;
     width: 35%; 
     text-align: center;
-    /* Garantia de quebra de linha em mobile se o conteúdo for muito longo */
     word-break: break-word;
 }
 
@@ -203,7 +203,7 @@ ul, ol {
     background-color: var(--color-menu-bg);
     border: 1px solid var(--color-border);
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Aplica sombra da classe .rounded */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 .dateCaption {
     background-color: var(--color-highlight);
@@ -234,92 +234,7 @@ ul, ol {
     margin: 0 10px;
     font-size: 90%;
     display: inline-block;
-    /* OTIMIZAÇÃO: Adiciona margem em mobile para links ficarem separados na quebra de linha */
     margin-bottom: 5px; 
-}
-
-
-/* RESPONSIVIDADE APRIMORADA (Mobile-First) */
-@media (max-width: 900px) {
-    /* OTIMIZAÇÃO: Melhora a legibilidade do texto de cabeçalho em telas pequenas */
-    .page-header h2 {
-        font-size: 2em; /* Reduz o tamanho do título principal em mobile */
-    }
-
-    body {
-        flex-direction: column;
-    }
-    #sidebar-wrapper {
-        width: 100%;
-        border-right: none;
-        border-bottom: 2px solid var(--color-border);
-    }
-    #menu {
-        width: 100%;
-        padding: 0;
-    }
-    #mainMenu {
-        /* OTIMIZAÇÃO: Usa scroll horizontal para menus muito longos (em caso de muitos itens) */
-        display: flex;
-        flex-wrap: nowrap; /* Não quebra automaticamente */
-        overflow-x: auto; /* Adiciona barra de rolagem horizontal se necessário */
-        justify-content: flex-start; /* Alinha à esquerda no mobile */
-        padding-bottom: 5px;
-    }
-    .menu a {
-        border: none;
-        /* OTIMIZAÇÃO: Define largura mínima para evitar que itens encolham demais */
-        min-width: 100px; 
-        flex-grow: 0; /* Impede que ele estique, deixando a rolagem acontecer */
-        flex-shrink: 0; /* Impede que ele encolha */
-        text-align: center;
-        padding: 8px 10px;
-    }
-    .content-flex-container {
-        flex-direction: column;
-        width: 100%;
-        padding: 0 10px;
-        gap: 0; /* Remove gap para usar margens padronizadas */
-    }
-    .mainContent {
-        width: 100%;
-        padding: 10px 0; /* Adiciona padding vertical, remove lateral */
-        text-align: left; /* OTIMIZAÇÃO: Texto centralizado em mobile dificulta a leitura. Alinhado à esquerda é melhor. */
-    }
-    .sidebarContainer {
-        width: 100%;
-        padding: 0 10px; /* Garante que a sidebar tenha padding lateral após ser movida */
-        margin-top: 20px;
-    }
-    /* OTIMIZAÇÃO: Reduz margem superior em h3 em mobile para economizar espaço */
-    h3 {
-        margin-top: 20px;
-    }
-    /* OTIMIZAÇÃO: Garantir que a imagem principal não ultrapasse a tela */
-    .main-logo-image {
-        max-width: 90%;
-    }
-    /* OTIMIZAÇÃO: Ajuste de padding/margin da Tabela Clássica */
-    .classic-table {
-        margin: 10px 0 20px 0;
-    }
-    .classic-table td:first-child {
-        width: 45%; /* Aumenta a largura da primeira coluna em mobile para facilitar o toque */
-    }
-}
-
-/* OTIMIZAÇÃO: @media para telas muito pequenas */
-/* Ajuste fino para telefones menores */
-@media (max-width: 500px) {
-    #main-wrapper {
-        padding: 10px 5px; /* Reduz ainda mais o padding lateral */
-    }
-    .menu a {
-        min-width: 80px; /* Reduz a largura mínima dos itens do menu */
-    }
-    .mainContent {
-        padding: 5px 0;
-    }
 }
 
 
@@ -472,7 +387,6 @@ caption {
 .linkTable td {
     padding: 8px 10px;
     border: 1px solid var(--color-border);
-    /* OTIMIZAÇÃO: Garantia de quebra de palavra em links longos para evitar overflow */
     word-wrap: break-word;
 }
 .linkTable td:first-child {
@@ -628,8 +542,250 @@ body::after {
 /* --- Edição de Erro no Destaque --- */
 
 #featured-article {
-    /* Corrigido: Esta regra estava com valor -200px, causando um erro de sobreposição. 
-       Mantenho sem margem superior explícita aqui para usar o fluxo normal do conteúdo. */
+    /* Manter sem margem superior explícita aqui */
 }
 
-/* Fim do CSS Otimizado. */
+/* ==================================== */
+/* RESPONSIVIDADE APRIMORADA (Mobile-First) */
+/* ==================================== */
+
+@media (max-width: 900px) {
+    /* OTIMIZAÇÃO: Melhora a legibilidade do texto de cabeçalho em telas pequenas */
+    .page-header h2 {
+        font-size: 2em;
+    }
+
+    body {
+        flex-direction: column;
+    }
+    #sidebar-wrapper {
+        width: 100%;
+        border-right: none;
+        border-bottom: 2px solid var(--color-border);
+    }
+    #menu {
+        width: 100%;
+        padding: 0;
+    }
+    #mainMenu {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-bottom: 5px;
+    }
+    .menu a {
+        border: none;
+        min-width: 100px; 
+        flex-grow: 0; 
+        flex-shrink: 0; 
+        text-align: center;
+        padding: 8px 10px;
+    }
+    .content-flex-container {
+        flex-direction: column;
+        width: 100%;
+        padding: 0 10px;
+        gap: 0;
+    }
+    .mainContent {
+        width: 100%;
+        padding: 10px 0;
+        text-align: left;
+    }
+    .sidebarContainer {
+        width: 100%;
+        padding: 0 10px;
+        margin-top: 20px;
+    }
+    h3 {
+        margin-top: 20px;
+    }
+    .main-logo-image {
+        max-width: 90%;
+    }
+    .classic-table {
+        margin: 10px 0 20px 0;
+    }
+    .classic-table td:first-child {
+        width: 45%;
+    }
+}
+
+/* OTIMIZAÇÃO: @media para telas muito pequenas */
+@media (max-width: 500px) {
+    #main-wrapper {
+        padding: 10px 5px;
+    }
+    .menu a {
+        min-width: 80px;
+    }
+    .mainContent {
+        padding: 5px 0;
+    }
+}
+
+
+/* ==================================== */
+/* --- NOVOS ESTILOS DE ANIMAÇÃO E MOBILE --- */
+/* ==================================== */
+
+/* * 1. Estilização básica do botão de menu (mobile) */
+.menu-toggle-button {
+    display: none; 
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 1000;
+    padding: 10px 15px;
+    font-size: 1.2em;
+    cursor: pointer;
+    background-color: var(--color-highlight);
+    color: var(--color-primary); 
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    /* Transição para suavizar o hover */
+    transition: background-color 0.2s; 
+}
+.menu-toggle-button:hover {
+    background-color: #0055aa; /* Um pouco mais claro no hover */
+}
+
+
+/* 2. Efeitos de Transição e Hover (Sutis) */
+/* Aplica a transição suave para a maioria dos elementos interativos */
+a, 
+.menu-link-button, 
+.game-card,
+#mainMenu a {
+    transition: all 0.3s ease-in-out; 
+}
+
+/* Efeito Hover no Menu Principal */
+#mainMenu a:hover {
+    color: var(--color-highlight); 
+    transform: translateX(5px); /* Deslize sutil para a direita */
+}
+
+/* Realce de Seção Ativa (Menu Principal) */
+#mainMenu a.active {
+    background-color: var(--color-menu-bg); /* Volta para a cor do menu */
+    color: var(--color-text); /* Garante a cor do texto */
+    border-left: 5px solid var(--color-highlight); /* Linha de destaque */
+    padding-left: 15px; 
+    font-weight: bold;
+}
+
+/* Classes para a nova seção de jogos populares */
+.game-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 15px;
+    margin-top: 20px;
+}
+.game-card {
+    width: 150px; 
+    text-align: center;
+    background: var(--color-menu-bg);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Efeito Hover nos Cards de Jogos */
+.game-card:hover {
+    transform: scale(1.03); /* Zoom leve */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Sombra mais intensa */
+}
+.game-cover {
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+/* 3. Media Query para Mobile (Telas menores que 768px) */
+@media (max-width: 768px) {
+    /* Exibir o botão no mobile */
+    .menu-toggle-button {
+        display: block;
+    }
+
+    /* Esconder o menu lateral (sidebar) por padrão no mobile */
+    #sidebar-wrapper {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 100%;
+        transition: left 0.3s ease-in-out; /* Adiciona transição para o movimento */
+        z-index: 999;
+        /* Garante que a sidebar tenha o estilo correto, já que no mobile ela é fixed */
+        background-color: var(--color-menu-bg); 
+        border-right: 2px solid var(--color-border);
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Mostrar a sidebar quando a classe 'open' for adicionada pelo JS */
+    #sidebar-wrapper.open {
+        left: 0;
+    }
+
+    /* Mover o conteúdo principal para a direita */
+    #main-wrapper.pushed {
+        margin-left: 250px;
+    }
+    
+    /* Garante que o conteúdo principal ocupe toda a largura no mobile */
+    .content-flex-container {
+        flex-direction: column; 
+    }
+    
+    .mainContent, .sidebarContainer {
+        width: 100%; 
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+
+/* ==================================== */
+/* 4. EFEITO FADE-IN ON SCROLL */
+/* ==================================== */
+
+/* Estado inicial: invisível e ligeiramente deslocado */
+.fade-in-element {
+    opacity: 0;
+    transform: translateY(20px); 
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Estado final: visível e na posição correta */
+.fade-in-element.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ==================================== */
+/* 5. ANIMAÇÃO DE CARREGAMENTO (CITAÇÃO) */
+/* ==================================== */
+
+/* Animação do Cursor Piscando */
+@keyframes blink {
+    0%, 100% { border-right-color: transparent }
+    50% { border-right-color: var(--color-highlight); }
+}
+
+/* Estilo para simular o cursor na citação */
+#retro-quote-container #randomQuote {
+    border-right: 2px solid transparent; /* O cursor */
+    white-space: nowrap; 
+    overflow: hidden;
+    /* Aplica a animação no texto da citação */
+    animation: 
+        blink 0.75s step-end infinite;
+}

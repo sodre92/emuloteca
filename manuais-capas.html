@@ -17,13 +17,16 @@
 </head>
 <body>
     
+    <button id="menu-toggle" aria-controls="sidebar-wrapper" aria-expanded="false" class="menu-toggle-button">
+        ☰ Menu
+    </button>
+    
     <div id="sidebar-wrapper">
         <div class="logo-container">
             <a href="index.html">
                 <img src="imagens/logo2.png" alt="Emuloteca - Voltar para a página inicial" class="logo-image">
             </a>
-            <h1 class="logo-text">Emuloteca</h1> 
-        </div>
+            <div class="logo-text">Emuloteca</div> </div>
 
         <nav id="menu" aria-label="Menu principal">
             <ul id="mainMenu" class="menu">
@@ -44,27 +47,28 @@
             
             <header class="page-header">
                 <img src="imagens/logo.png" alt="Logo Emuloteca: O Santuário da Emulação Clássica" class="main-logo-image">
+                <h1 style="margin-top: 10px;">Manuais e Capas Clássicas</h1>
                 <p>Reviva a experiência completa! Nesta seção, você pode fazer o download de manuais de instruções originais e artes de capa em alta resolução dos seus jogos e consoles favoritos.</p>
             </header>
 
             <div class="content-flex-container">
                 <main class="mainContent" style="flex: 2 1 600px;"> 
                     
-                    <section id="filter-controls" class="sidebarUnit rounded" style="margin-bottom: 20px;">
+                    <section id="filter-controls" class="sidebarUnit rounded fade-in-element" style="margin-bottom: 20px;">
                         <h3>Filtrar por Console:</h3>
                         <div id="tag-buttons">
                             <button class="filter-btn active" data-filter="all">Todos</button>
                             <button class="filter-btn nintendo" data-filter="nintendo">Nintendo</button>
                             <button class="filter-btn sega" data-filter="sega">Sega</button>
                             <button class="filter-btn sony" data-filter="sony">Sony</button>
-                            <button class="filter-btn atari" data-filter="atari">Outros</button>
+                            <button class="filter-btn outros" data-filter="outros">Outros</button>
                         </div>
                     </section>
                     <h2 style="margin-top: 0;">Biblioteca de Manuais e Capas</h2>
                     
-                    <p>Selecione um console para visualizar a coleção de manuais e artes disponíveis:</p>
+                    <p class="fade-in-element">Selecione um console para visualizar a coleção de manuais e artes disponíveis:</p>
 
-                    <ul class="list-cards" style="display:flex; flex-wrap:wrap; gap:15px; list-style:none; padding: 0;">
+                    <ul class="list-cards fade-in-element" style="display:flex; flex-wrap:wrap; gap:15px; list-style:none; padding: 0;">
                         <li class="console-card nintendo" style="background: var(--color-menu-bg); padding: 15px; border-radius: 8px; flex: 1 1 200px; text-align: center;">
                             <h4>Super Nintendo</h4>
                             <p>Manuais (200+) | Capas (500+)</p>
@@ -80,9 +84,14 @@
                             <p>Manuais (100+) | Capas (200+)</p>
                             <a href="#" class="menu-link-button">Ver Conteúdo</a>
                         </li>
-                        </ul>
+                        <li class="console-card outros" style="background: var(--color-menu-bg); padding: 15px; border-radius: 8px; flex: 1 1 200px; text-align: center;">
+                            <h4>Atari 2600 e Outros</h4>
+                            <p>Manuais (80+) | Capas (150+)</p>
+                            <a href="#" class="menu-link-button">Ver Conteúdo</a>
+                        </li>
+                    </ul>
 
-                    <p style="text-align:center; padding-top: 25px;">
+                    <p style="text-align:center; padding-top: 25px;" class="fade-in-element">
                         Não encontrou o que procurava? Sugira um item através da <a href="contato.html">Página de Contato</a>.
                     </p>
                 </main>
@@ -94,6 +103,17 @@
                         <p style="text-align: center; margin-top: 15px; margin-bottom: 0;">
                             <a href="guias.html#manuais" class="menu-link-button">Dicas de Coleção</a>
                         </p>
+                    </div>
+
+                    <div class="sidebarUnit rounded" style="margin-top: 20px;">
+                        <h3>Frase do Cartucho</h3>
+                        <div id="retro-quote-container" style="text-align: center; padding: 10px;">
+                            <p id="randomQuote" style="font-style: italic; color: #ff8c00; font-size: 1.1em;">
+                                Carregando citação...
+                            </p>
+                            <p id="quoteSource" style="font-size: 0.8em; margin-top: 5px; color: #aaa;">
+                            </p>
+                        </div>
                     </div>
                 </aside>
             </div>
@@ -108,18 +128,85 @@
             </footer>
         </div>
     </div>
+    
 <script>
+        // Implementação do Menu Toggle (Mobile)
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const sidebar = document.getElementById('sidebar-wrapper');
+            const mainWrapper = document.getElementById('main-wrapper');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true' || false;
+            
+            this.setAttribute('aria-expanded', !isExpanded);
+            sidebar.classList.toggle('open');
+            mainWrapper.classList.toggle('pushed');
+        });
+
+        // ===================================
+        // ANIMAÇÃO FADE-IN ON SCROLL
+        // ===================================
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, {
+            threshold: 0.2 // O elemento precisa estar 20% visível para disparar
+        });
+
+        // Seleciona elementos para o fade-in
+        document.querySelectorAll('.fade-in-element').forEach(element => {
+            observer.observe(element);
+        });
+
+        // ===================================
+        // CITAÇÕES RETRÔ
+        // ===================================
+        const retroQuotes = [
+            { quote: "It's dangerous to go alone! Take this.", source: "The Legend of Zelda (NES)" },
+            { quote: "All your base are belong to us.", source: "Zero Wing (Mega Drive)" },
+            { quote: "Finish Him!", source: "Mortal Kombat (Arcade)" },
+            { quote: "A winner is you!", source: "Pro Wrestling (NES)" },
+            { quote: "Do a barrel roll!", source: "Star Fox 64 (N64)" },
+            { quote: "War. War never changes.", source: "Fallout (PC)" },
+            { quote: "Snaaake! Snaaake!", source: "Metal Gear Solid (PS1)" },
+            { quote: "Thank you, Mario! But our princess is in another castle!", source: "Super Mario Bros. (NES)" },
+            { quote: "Get over here!", source: "Mortal Kombat (Arcade/Multi)" },
+            { quote: "I am Error.", source: "Zelda II: The Adventure of Link (NES)" },
+        ];
+
+        function displayRandomQuote() {
+            const randomIndex = Math.floor(Math.random() * retroQuotes.length);
+            const randomQuote = retroQuotes[randomIndex];
+            const quoteElement = document.getElementById('randomQuote');
+            const sourceElement = document.getElementById('quoteSource');
+
+            if (quoteElement && sourceElement) {
+                quoteElement.textContent = randomQuote.quote;
+                sourceElement.textContent = "— " + randomQuote.source;
+            }
+        }
+        displayRandomQuote();
+
+
+        // ===================================
+        // LÓGICA DE FILTRAGEM
+        // ===================================
         const filterButtons = document.querySelectorAll('#filter-controls .filter-btn');
         const consoleCards = document.querySelectorAll('.list-cards .console-card');
         
         // Função principal de filtragem
         function filterContent(filterTag) {
-            let anyCardVisible = false;
+            let totalCards = 0;
+            let visibleCards = 0;
 
             consoleCards.forEach(card => {
                 // Pega as classes de tags do card (ex: 'nintendo', 'sega')
                 const cardClasses = card.className;
                 let shouldShow = false;
+
+                totalCards++;
 
                 // 1. O filtro 'all' (Todos) sempre mostra
                 if (filterTag === 'all') {
@@ -132,14 +219,11 @@
 
                 if (shouldShow) {
                     card.style.display = 'block'; // Mostra o card
-                    anyCardVisible = true;
+                    visibleCards++;
                 } else {
                     card.style.display = 'none'; // Esconde o card
                 }
             });
-
-            // Nota: Você pode adicionar uma mensagem de "Nenhum resultado" se quiser,
-            // mas por enquanto, manteremos apenas a lógica de exibição/ocultação.
         }
 
         // Inicializa: Adiciona o evento de clique a cada botão de filtro
@@ -157,7 +241,5 @@
         // Chama a função no carregamento para garantir que todos estejam visíveis
         filterContent('all');
     </script>
-    </body>
-</html>
-    </body>
+</body>
 </html>

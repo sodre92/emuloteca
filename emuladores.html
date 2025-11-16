@@ -3,18 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emuloteca - Sua Biblioteca de Emuladores</title>
+    
+    <title>Emuloteca: Download dos Melhores Emuladores (NES, SNES, PS1, PS2)</title>
+    <meta name="description" content="Sua biblioteca de emuladores para Windows, Linux e Mac. Encontre links oficiais para FCEUX, Mesen, SNES9x, Bsnes, DuckStation e guias para instalação de BIOS.">
+    
     <link rel="stylesheet" href="style.css"> 
     <link href="https://fonts.googleapis.com/css2?family=Marmelad&display=swap" rel="stylesheet">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
 
+    <button id="menu-toggle" aria-controls="sidebar-wrapper" aria-expanded="false" class="menu-toggle-button">
+        ☰ Menu
+    </button>
+    
     <div id="sidebar-wrapper">
         <div class="logo-container">
-            <img src="imagens/logo2.png" alt="Logo Arquivo Digital" class="logo-image">
-            <h1 class="logo-text">Arquivo Digital</h1>
-        </div>
+            <a href="index.html">
+                <img src="imagens/logo2.png" alt="Logo Emuloteca" class="logo-image">
+            </a>
+            <div class="logo-text">Emuloteca</div> </div>
         <nav id="menu" aria-label="Menu principal">
             <ul id="mainMenu" class="menu">
                 <li class="menu"><a href="index.html">🏠 Início</a></li>
@@ -26,6 +34,15 @@
                 <li class="menu"><a href="links.html">🌐 Links Úteis</a></li>
             </ul>
         </nav>
+
+        <nav id="subMenu" aria-label="Navegação Rápida de Emuladores" class="sidebarUnit rounded" style="margin-top: 20px;">
+            <h3>Consoles (Navegação Rápida)</h3>
+            <ul class="submenu-list">
+                <li><a href="#nes-emulators">🎮 Nintendo (NES)</a></li>
+                <li><a href="#snes-emulators">🎮 Super Nintendo</a></li>
+                <li><a href="#ps1-emulators">💿 PlayStation (PS1)</a></li>
+                </ul>
+        </nav>
         
     </div>
 
@@ -33,8 +50,9 @@
     <div id="main">
         
         <header class="page-header">
-            <img src="imagens/logo.png" alt="Emuladores - Arquivo Digital" class="main-logo-image">
+            <img src="imagens/logo.png" alt="Emuladores - Emuloteca" class="main-logo-image">
             
+            <h1 style="margin-top: 10px;">Sua Biblioteca de Emuladores</h1>
             <p>O Portal para o Passado Digital.</p>
             
             </header>
@@ -44,20 +62,20 @@
                 <main class="mainContent">
                     
                     <p style="margin-bottom: 25px;">
-                        Preservando a emoção dos jogos clássicos. Emuladores são softwares que permitem que seu PC (ou outros dispositivos) simulem o hardware de consoles antigos. Abaixo você encontra uma seleção dos emuladores mais populares e recomendados para cada sistema, com foco em precisão, estabilidade e facilidade de uso.
+                        Preservando a emoção dos jogos clássicos. **Emuladores** são softwares que permitem que seu PC (ou outros dispositivos) simulem o hardware de consoles antigos. Abaixo você encontra uma seleção dos emuladores mais populares e recomendados para cada sistema, com foco em precisão, estabilidade e facilidade de uso.
                     </p>
 
-                    <section id="ad-unit-top">
+                    <section id="ad-unit-top" class="fade-in-element">
                         <div style="background-color: #000045; padding: 15px; border: 1px solid #000066; margin-bottom: 30px; border-radius: 5px;">
                             [Espaço para Anúncio Principal - 728x90]
                         </div>
                     </section>
                     
-                    <p style="text-align:center; margin-bottom: 30px; font-style: italic;">
-                        Precisa de ajuda para começar? Consulte nosso <a href="guias.html" class="link-destaque">Guia de Primeiros Passos</a>.
+                    <p style="text-align:center; margin-bottom: 30px; font-style: italic;" class="fade-in-element">
+                        Precisa de ajuda para começar a usar o RetroArch? Consulte nosso <a href="guia-inicial-retroarch.html" class="link-destaque">Guia de Instalação e Controles</a>.
                     </p>
 
-                    <section id="nes-emulators">
+                    <section id="nes-emulators" class="fade-in-element">
                         <h2>🕹️ Nintendo (NES) - 1983</h2>
                         <table class="rounded emulator-table">
                             <thead>
@@ -87,7 +105,7 @@
                     
                     <hr style="margin: 40px 0; border-color: #333;">
 
-                    <section id="snes-emulators">
+                    <section id="snes-emulators" class="fade-in-element">
                         <h2>🎮 Super Nintendo (SNES) - 1990</h2>
                         <table class="rounded emulator-table">
                             <thead>
@@ -117,7 +135,7 @@
                     
                     <hr style="margin: 40px 0; border-color: #333;">
 
-                    <section id="ps1-emulators">
+                    <section id="ps1-emulators" class="fade-in-element">
                         <h2>💿 PlayStation (PS1) - 1994</h2>
                         <table class="rounded emulator-table">
                             <thead>
@@ -142,6 +160,8 @@
                         </table>
                         <p style="margin-top: 15px; border-left: 3px solid #003791; padding-left: 10px; background-color: #1a1a1a; text-align: center;">
                             O DuckStation é o padrão ouro moderno para emulação de PS1, com melhorias gráficas e alta precisão.
+                            <br><br>
+                            **Atenção:** Se o seu jogo não está rodando, a causa mais comum é a falta do BIOS. Consulte nosso **<a href="guia-avancado-bios.html" class="link-destaque">Guia Avançado: Instalação de Arquivos BIOS</a>** para resolver isso.
                         </p>
                     </section>
                     
@@ -155,7 +175,7 @@
                         <h3>🗄️ Bios e Arquivos</h3>
                         <p>Arquivos essenciais para que alguns emuladores funcionem corretamente.</p>
                         <ul style="list-style: none; padding: 0;">
-                            <li style="margin-bottom: 10px;"><a href="#">BIOS de PS1</a></li>
+                            <li style="margin-bottom: 10px;"><a href="guia-avancado-bios.html">BIOS de PS1 e PS2 (Guia)</a></li>
                             <li style="margin-bottom: 10px;"><a href="#">BIOS de Neo Geo</a></li>
                             <li style="margin-bottom: 10px;"><a href="#">Arquivos de Cheats</a></li>
                         </ul>
@@ -165,27 +185,105 @@
                     </div>
 
                     <div class="sidebarUnit" style="margin-top: 20px;">
-                        <h3>Guia Rápido</h3>
-                        <p>O que você precisa saber para começar a emular.</p>
-                        <ul style="list-style: disc; margin-left: 20px;">
-                            <li>O que são ROMs?</li>
-                            <li>Configuração de Joystick</li>
-                            <li>Como rodar jogos de CD</li>
-                        </ul>
-                        <p style="text-align: center; margin-top: 20px;">
-                            <a href="guias.html" class="menu-link-button">Ver Guias</a>
-                        </p>
+                        <h3>Frase do Cartucho</h3>
+                        <div id="retro-quote-container" style="text-align: center; padding: 10px;">
+                            <p id="randomQuote" style="font-style: italic; color: #ff8c00; font-size: 1.1em;">
+                                Carregando citação...
+                            </p>
+                            <p id="quoteSource" style="font-size: 0.8em; margin-top: 5px; color: #aaa;">
+                            </p>
+                        </div>
                     </div>
+
+                    <div class="sidebarUnit" style="margin-top: 20px;">
+                        <h3>Outras Seções</h3>
+                        </div>
                 </aside>
 
-            </div> <div id="page-footer">
+            </div> 
+            
+            <footer id="page-footer">
                 <div class="footer-links">
                     <a href="sobre.html">Sobre</a> | 
                     <a href="politica.html">Política de Privacidade</a> | 
                     <a href="contato.html">Contato</a>
                     <p style="margin-top: 10px; font-size: 80%; color: #888;">Criado por Jogadores. Para Jogadores. © 2025 Emuloteca. Todos os direitos reservados.</p>
                 </div>
-            </div>
+            </footer>
 
-        </div> </div> </body>
+        </div> 
+    </div> 
+    <script>
+        // Implementação do Menu Toggle (Mobile)
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const sidebar = document.getElementById('sidebar-wrapper');
+            const mainWrapper = document.getElementById('main-wrapper');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true' || false;
+            
+            this.setAttribute('aria-expanded', !isExpanded);
+            sidebar.classList.toggle('open');
+            mainWrapper.classList.toggle('pushed');
+        });
+
+        // ===================================
+        // ANIMAÇÃO FADE-IN ON SCROLL
+        // ===================================
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, {
+            threshold: 0.2 
+        });
+
+        document.querySelectorAll('.fade-in-element').forEach(element => {
+            observer.observe(element);
+        });
+
+        // ===================================
+        // CITAÇÕES RETRÔ
+        // ===================================
+        const retroQuotes = [
+            { quote: "It's dangerous to go alone! Take this.", source: "The Legend of Zelda (NES)" },
+            { quote: "All your base are belong to us.", source: "Zero Wing (Mega Drive)" },
+            { quote: "Finish Him!", source: "Mortal Kombat (Arcade)" },
+            { quote: "A winner is you!", source: "Pro Wrestling (NES)" },
+            { quote: "Do a barrel roll!", source: "Star Fox 64 (N64)" },
+            { quote: "War. War never changes.", source: "Fallout (PC)" },
+            { quote: "Snaaake! Snaaake!", source: "Metal Gear Solid (PS1)" },
+            { quote: "Thank you, Mario! But our princess is in another castle!", source: "Super Mario Bros. (NES)" },
+            { quote: "Get over here!", source: "Mortal Kombat (Arcade/Multi)" },
+            { quote: "I am Error.", source: "Zelda II: The Adventure of Link (NES)" },
+        ];
+
+        function displayRandomQuote() {
+            const randomIndex = Math.floor(Math.random() * retroQuotes.length);
+            const randomQuote = retroQuotes[randomIndex];
+            const quoteElement = document.getElementById('randomQuote');
+            const sourceElement = document.getElementById('quoteSource');
+
+            if (quoteElement && sourceElement) {
+                quoteElement.textContent = randomQuote.quote;
+                sourceElement.textContent = "— " + randomQuote.source;
+            }
+        }
+        displayRandomQuote();
+
+
+        // ===================================
+        // CONTAGEM DE EMULADORES (MANTIDO)
+        // ===================================
+        let emuladoresCount = 0;
+        const tables = document.querySelectorAll('.emulator-table tbody');
+        
+        tables.forEach(tbody => {
+            emuladoresCount += tbody.querySelectorAll('tr').length;
+        });
+
+        localStorage.setItem('emuladoresCount', emuladoresCount);
+    </script>
+</body>
 </html>

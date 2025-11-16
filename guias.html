@@ -7,9 +7,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <meta name="description" content="Acesse nossos guias e tutoriais completos para configurar emuladores, organizar ROMs, e usar patches de tradução. Encontre também manuais e capas de jogos digitalizados.">
+    <meta name="description" content="Tutoriais passo a passo para configurar RetroArch, instalar arquivos BIOS, aplicar patches de tradução e otimizar emuladores para SNES, PS1, N64 e mais. Sua central de conhecimento retrô.">
     
-    <title>Emuloteca: Guias e Tutoriais</title>
+    <title>Emuloteca: Guias e Tutoriais Avançados de Emulação</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,12 +18,16 @@
 </head>
 <body>
     
+    <button id="menu-toggle" aria-controls="sidebar-wrapper" aria-expanded="false" class="menu-toggle-button">
+        ☰ Menu
+    </button>
+
     <div id="sidebar-wrapper">
         <div class="logo-container">
             <a href="index.html">
                 <img src="imagens/logo2.png" alt="Emuloteca - Voltar para a página inicial" class="logo-image">
             </a>
-            <h1 class="logo-text">Emuloteca</h1> 
+            <div class="logo-text">Emuloteca</div> 
         </div>
 
         <nav id="menu" aria-label="Menu principal">
@@ -40,9 +44,10 @@
         <nav id="subMenu" aria-label="Navegação Rápida de Guias e Manuais" class="sidebarUnit rounded" style="margin-top: 20px;">
             <h3>Navegação Rápida</h3>
             <ul class="submenu-list">
-                <li><a href="#guias-config">⚙️ Guias de Emulação</a></li>
-                <li><a href="#manuais">📚 Manuais e Capas</a></li>
-                <li><a href="#contribuir">⭐ Contribua</a></li>
+                <li><a href="#setup">⚙️ Instalação e Configuração</a></li>
+                <li><a href="#otimizacao">📈 Otimização e Solução de Problemas</a></li>
+                <li><a href="#rom-hacks">📝 Patches e ROM Hacking</a></li>
+                <li><a href="manuais-capas.html">📚 Acesso ao Acervo de Manuais</a></li>
             </ul>
         </nav>
     </div>
@@ -52,116 +57,115 @@
             
             <header class="page-header">
                 <img src="imagens/logo.png" alt="Logo Emuloteca: O Santuário da Emulação Clássica" class="main-logo-image">
-                <h1 style="margin-top: 10px;"></h1>
+                <h1 style="margin-top: 10px;">Central de Guias e Tutoriais Avançados</h1>
                 <p>
-                    Nossa central de conhecimento: tutoriais passo a passo para configurar sua experiência retrô, além do acervo digitalizado de manuais e capas originais.
+                    Aprenda a dominar o mundo da emulação. Nossos tutoriais cobrem desde a instalação básica até ajustes finos, como BIOS, shaders e patches de tradução.
                 </p>
             </header>
             
             <div class="content-flex-container">
                 <main class="mainContent" style="flex: 2 1 600px;">
                     
-                    <section id="ad-unit-top" class="rounded" style="margin: 20px 0;">
+                    <section id="ad-unit-top" class="rounded fade-in-element" style="margin: 20px 0;">
                         <div style="text-align: center; padding: 15px; background: var(--color-menu-bg); border-radius: 8px;">
                             [Placeholder para Anúncio Principal]
                         </div>
                     </section>
                     
-                    <h2 id="guias-config" style="text-align: center; margin-bottom: 20px;">⚙️ Guias de Configuração de Emuladores</h2>
+                    <h2 id="setup" style="text-align: center; margin-bottom: 20px;">⚙️ Instalação e Configuração Inicial</h2>
                     
-                    <p>
-                        Se você é novo no mundo da emulação ou precisa de dicas avançadas, nossos tutoriais detalhados cobrem desde a instalação básica até configurações específicas para cada console.
+                    <p class="fade-in-element">
+                        Comece sua jornada retrô. Estes guias são essenciais para instalar e configurar o hardware e software básico de emulação.
                     </p>
                     
-                    <ul class="guide-list" style="list-style: none; padding: 0;">
+                    <ul class="guide-list fade-in-element" style="list-style: none; padding: 0;">
                         <li style="margin-bottom: 20px; border-left: 4px solid var(--color-link); padding-left: 10px;">
-                            <a href="#guia-inicial" class="guia-link">
-                                <strong>[Guia Básico] Primeiros Passos na Emulação: Instalação e Controles</strong>
+                            <a href="guia-inicial-retroarch.html" class="guia-link">
+                                <strong>[Guia Básico] Primeiros Passos: Instalação, Cores e Controles no RetroArch</strong>
                             </a>
-                            <p style="font-size: 0.9em; margin-top: 5px; color: var(--color-text-secondary);">Aprenda a escolher, instalar e configurar os controles do seu primeiro emulador (Recomendado: RetroArch).</p>
+                            <p style="font-size: 0.9em; margin-top: 5px; color: var(--color-text-secondary);">O ponto de partida para usar a interface unificada. Cobrindo instalação, cores e mapeamento de controles.</p>
                         </li>
-                        <li style="margin-bottom: 20px; border-left: 4px solid var(--color-link); padding-left: 10px;">
-                            <a href="#guia-bios" class="guia-link">
-                                <strong id="guia-bios">[Guia Avançado] O que são BIOS e como instalá-las corretamente</strong>
+                        <li style="margin-bottom: 20px; border-left: 4px solid var(--color-highlight); padding-left: 10px;">
+                            <a href="guia-avancado-bios.html" class="guia-link">
+                                <strong id="guia-bios">[Guia Crítico] O que são BIOS e como instalá-las corretamente</strong>
                             </a>
-                            <p style="font-size: 0.9em; margin-top: 5px; color: var(--color-text-secondary);">Essencial para sistemas como PS1, PS2 e Dreamcast. Entenda a legalidade e o processo de instalação.</p>
-                        </li>
-                        <li style="margin-bottom: 20px; border-left: 4px solid var(--color-link); padding-left: 10px;">
-                            <a href="#guia-traducoes" class="guia-link">
-                                <strong>[Guia Rápido] Aplicando Patches de Tradução (.IPS, .BPS) em ROMs</strong>
-                            </a>
-                            <p style="font-size: 0.9em; margin-top: 5px; color: var(--color-text-secondary);">Passo a passo sobre como aplicar traduções feitas por fãs para jogar clássicos no seu idioma.</p>
+                            <p style="font-size: 0.9em; margin-top: 5px; color: var(--color-text-secondary);">**Guia Essencial:** Para sistemas como PS1, PS2, Saturno e Dreamcast. Entenda o processo de instalação e organização dos arquivos BIOS.</p>
                         </li>
                     </ul>
 
-                    <h2 id="manuais" style="text-align: center; margin-top: 40px; margin-bottom: 20px;">📚 Manuais e Capas por Console</h2>
-                    <p style="text-align: center;">
-                        Nosso objetivo é digitalizar o máximo de manuais de jogos e arte de caixas possível, preservando a história do Retrogaming.
+                    <h2 id="otimizacao" style="text-align: center; margin-top: 40px; margin-bottom: 20px;">📈 Otimização e Solução de Problemas</h2>
+                    
+                    <p class="fade-in-element">
+                        Melhore a qualidade de imagem e som, resolva lentidões e configure as melhores opções para emuladores específicos.
+                    </p>
+
+                    <ul class="guide-list fade-in-element" style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 20px; border-left: 4px solid #32CD32; padding-left: 10px;">
+                            <a href="guia-config-snes.html" class="guia-link">
+                                <strong>[Guia SNES] Configurando Emuladores Snes9x e BSNES para Precisão</strong>
+                            </a>
+                            <p style="font-size: 0.9em; margin-top: 5px; color: var(--color-text-secondary);">Focando em rodar chips especiais (Super FX) sem problemas e ajustes de vídeo.</p>
+                        </li>
+                        <li style="margin-bottom: 20px; border-left: 4px solid #32CD32; padding-left: 10px;">
+                            <a href="guia-shaders-filtros.html" class="guia-link">
+                                <strong>[Guia Visual] Shaders, Filtros e Reconstrução de Scanlines (Efeitos CRT)</strong>
+                            </a>
+                            <p style="font-size: 0.9em; margin-top: 5px; color: var(--color-text-secondary);">Como aplicar filtros visuais para deixar seus jogos com um aspecto moderno ou clássico (CRT/Arcade).</p>
+                        </li>
+                    </ul>
+
+                    <h2 id="rom-hacks" style="text-align: center; margin-top: 40px; margin-bottom: 20px;">📝 Patches, Traduções e ROM Hacking</h2>
+                    
+                    <p class="fade-in-element">
+                        Tudo que você precisa para personalizar sua biblioteca, jogar títulos traduzidos ou aplicar mods.
+                    </p>
+
+                    <ul class="guide-list fade-in-element" style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 20px; border-left: 4px solid var(--color-link); padding-left: 10px;">
+                            <a href="guia-aplicar-patches.html" class="guia-link"> <strong>[Guia Rápido] Aplicando Patches de Tradução (.IPS, .BPS, .Xdelta)</strong>
+                            </a>
+                            <p style="font-size: 0.9em; margin-top: 5px; color: var(--color-text-secondary);">Passo a passo sobre como usar as principais ferramentas para aplicar traduções ou mods.</p>
+                        </li>
+                        <li style="margin-bottom: 20px; border-left: 4px solid var(--color-highlight); padding-left: 10px;">
+                            <a href="traducoes.html" class="guia-link">
+                                <strong>→ Acesso Rápido: Biblioteca de Traduções em Português-BR</strong>
+                            </a>
+                            <p style="font-size: 0.9em; margin-top: 5px; color: var(--color-text-secondary);">Veja nossa lista completa e curada dos melhores patches de tradução.</p>
+                        </li>
+                    </ul>
+
+                    <h2 id="manuais" style="text-align: center; margin-top: 40px; margin-bottom: 20px;">📚 Acervo Digitalizado de Manuais e Capas</h2>
+                    <p style="text-align: center;" class="fade-in-element">
+                        Todo o nosso acervo de scans de alta qualidade de capas e manuais originais foi movido para uma página dedicada.
                     </p>
                     
-                    <div class="centered mainContent" style="display:flex; align-items:flex-start; justify-content:space-around; flex-wrap:wrap; gap:20px; margin-top:10px">
-                        
-                        <table class="manual-list-table rounded" style="flex: 1 1 280px; max-width: 48%;">
-                            <caption>Manuais Disponíveis</caption>
-                            <tbody>
-                                <tr>
-                                    <th>Sistema</th>
-                                    <th style="text-align:right">Manuais</th>
-                                </tr>
-                                <tr><td><a href="#">Nintendo (NES)</a></td><td class="manual-count">0</td></tr>
-                                <tr><td><a href="#">Super Nintendo</a></td><td class="manual-count">0</td></tr>
-                                <tr><td><a href="#">Genesis / MD</a></td><td class="manual-count">0</td></tr>
-                                <tr><td><a href="#">Nintendo 64</a></td><td class="manual-count">0</td></tr>
-                                <tr><td><a href="#">PlayStation</a></td><td class="manual-count">0</td></tr>
-                            </tbody>
-                        </table>
-
-                        <table class="manual-list-table rounded striped latest-additions" style="flex: 1 1 280px; max-width: 48%;">
-                            <caption>Últimas Adições</caption>
-                            <tbody>
-                                <tr>
-                                    <th>Sistema</th>
-                                    <th>Título</th>
-                                </tr>
-                                <tr><td style="text-align:center">PS1</td><td style="padding-left:5px"><a href="#">Beyblade</a></td></tr>
-                                <tr><td style="text-align:center">Wii</td><td style="padding-left:5px"><a href="#">Bakugan</a></td></tr>
-                                <tr><td style="text-align:center">DS</td><td style="padding-left:5px"><a href="#">LEGO Batman 2</a></td></tr>
-                                <tr><td style="text-align:center">Xbox360</td><td style="padding-left:5px"><a href="#">Prototype</a></td></tr>
-                                <tr><td style="text-align:center">PS1</td><td style="padding-left:5px"><a href="#">Oddworld</a></td></tr>
-                            </tbody>
-                        </table>
+                    <div style="text-align:center; margin-top: 15px; margin-bottom: 40px;">
+                        <a href="manuais-capas.html" class="menu-link-button" style="background-color: #32CD32; border-color: #32CD32; font-weight: bold; padding: 10px 20px; border-radius: 5px; text-decoration: none;">
+                            Acessar Biblioteca de Manuais e Capas
+                        </a>
                     </div>
                     
-                    <form method="GET" action="#" style="margin-top:40px; margin-bottom:20px">
-                        <h2 id="busca-manuais" style="text-align: center;">🔍 Buscar Manuais</h2>
-                        <div style="text-align:center">
-                            <input type="search" name="q" placeholder="Buscar um manual..." style="width:270px; padding: 8px 10px; border: 1px solid var(--color-link); background: var(--color-menu-bg); color: var(--color-text); border-radius: 5px;" minlength="2" required> 
-                            <button type="submit" title="Buscar" class="menu-link-button" style="padding: 8px 12px; font-weight: normal;">&#128269;</button><br>
-                            <a href="#">Busca Avançada</a> 
-                        </div>
-                    </form>
-
-                    <h2 id="contribuir" style="text-align: center; margin-top: 40px;">⭐ Contribua para o Projeto</h2>
-                    <p style="text-align:center">Quer ajudar a preservar a história dos jogos?<br>Você pode enviar digitalizações de manuais e capas de jogos que você possui!</p>
-                    <p style="text-align:center; margin-top: 15px; margin-bottom: 40px;">
-                        <a href="#" class="menu-link-button">Contribuir um Manual</a>
-                    </p>
-
-                </main>
+                    </main>
 
                 <aside class="sidebarContainer" style="flex: 1 1 250px;">
                     <div class="sidebarUnit rounded">
                         <h3>Destaques</h3>
                         <p>O guia de **BIOS** é o nosso tutorial mais procurado. Garanta que seus emuladores de PS1, PS2 e Dreamcast estejam rodando perfeitamente!</p>
                         <ul style="padding-left: 20px;">
-                            <li><a href="#guia-bios">Guia de BIOS</a></li>
-                            <li><a href="#guia-traducoes">Guia de Traduções</a></li>
+                            <li><a href="guia-avancado-bios.html">Guia de BIOS</a></li>
+                            <li><a href="traducoes.html">Biblioteca de Traduções</a></li>
+                            <li><a href="#setup">Introdução à Emulação</a></li>
                         </ul>
                     </div>
                     
                     <div class="sidebarUnit rounded" style="margin-top: 20px;">
-                        <div style="text-align: center; padding: 15px; background: var(--color-highlight); color: white; border-radius: 8px;">
-                            [Placeholder para Anúncio Lateral]
+                        <h3>Frase do Cartucho</h3>
+                        <div id="retro-quote-container" style="text-align: center; padding: 10px;">
+                            <p id="randomQuote" style="font-style: italic; color: #ff8c00; font-size: 1.1em;">
+                                Carregando citação...
+                            </p>
+                            <p id="quoteSource" style="font-size: 0.8em; margin-top: 5px; color: #aaa;">
+                            </p>
                         </div>
                     </div>
 
@@ -186,5 +190,72 @@
             </footer>
         </div>
     </div>
+
+    <script>
+        // Implementação do Menu Toggle (Mobile)
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const sidebar = document.getElementById('sidebar-wrapper');
+            const mainWrapper = document.getElementById('main-wrapper');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true' || false;
+            
+            this.setAttribute('aria-expanded', !isExpanded);
+            sidebar.classList.toggle('open');
+            mainWrapper.classList.toggle('pushed');
+        });
+
+        // ===================================
+        // ANIMAÇÃO FADE-IN ON SCROLL
+        // ===================================
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, {
+            threshold: 0.2 
+        });
+
+        document.querySelectorAll('.fade-in-element').forEach(element => {
+            observer.observe(element);
+        });
+
+        // ===================================
+        // CITAÇÕES RETRÔ
+        // ===================================
+        const retroQuotes = [
+            { quote: "It's dangerous to go alone! Take this.", source: "The Legend of Zelda (NES)" },
+            { quote: "All your base are belong to us.", source: "Zero Wing (Mega Drive)" },
+            { quote: "Finish Him!", source: "Mortal Kombat (Arcade)" },
+            { quote: "A winner is you!", source: "Pro Wrestling (NES)" },
+            { quote: "Do a barrel roll!", source: "Star Fox 64 (N64)" },
+            { quote: "War. War never changes.", source: "Fallout (PC)" },
+            { quote: "Snaaake! Snaaake!", source: "Metal Gear Solid (PS1)" },
+            { quote: "Thank you, Mario! But our princess is in another castle!", source: "Super Mario Bros. (NES)" },
+            { quote: "Get over here!", source: "Mortal Kombat (Arcade/Multi)" },
+            { quote: "I am Error.", source: "Zelda II: The Adventure of Link (NES)" },
+        ];
+
+        function displayRandomQuote() {
+            const randomIndex = Math.floor(Math.random() * retroQuotes.length);
+            const randomQuote = retroQuotes[randomIndex];
+            const quoteElement = document.getElementById('randomQuote');
+            const sourceElement = document.getElementById('quoteSource');
+
+            if (quoteElement && sourceElement) {
+                quoteElement.textContent = randomQuote.quote;
+                sourceElement.textContent = "— " + randomQuote.source;
+            }
+        }
+        displayRandomQuote();
+
+        // ===================================
+        // CONTAGEM DE GUIAS
+        // ===================================
+        // Conta todos os <li> dentro das listas de guias na mainContent
+        const totalGuides = document.querySelectorAll('ul.guide-list > li').length;
+        localStorage.setItem('guidesCount', totalGuides); 
+    </script>
 </body>
 </html>

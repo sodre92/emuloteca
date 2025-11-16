@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <meta name="description" content="Bem-vindo à Emuloteca! Encontre os melhores emuladores, guias e uma vasta biblioteca de ROMs para reviver a emoção dos clássicos do SNES, N64, PS1 e mais.">
-    <title>Emuloteca - Sua Biblioteca de Emuladores</title>
+    <meta name="description" content="Emuloteca: O Portal definitivo do Retrogaming. Encontre os melhores emuladores verificados, guias de configuração e uma vasta biblioteca de ROMs para reviver os clássicos do SNES, N64, PS1 e mais.">
+    <title>Emuloteca - Seu Portal Definitivo de Emuladores e Retrogaming</title>
     
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2674214737169321"
       crossorigin="anonymous"></script>
@@ -29,10 +29,14 @@
 </head>
 <body>
     
+    <button id="menu-toggle" aria-controls="sidebar-wrapper" aria-expanded="false" class="menu-toggle-button">
+        ☰ Menu
+    </button>
+    
     <div id="sidebar-wrapper">
         <div class="logo-container">
             <a href="index.html">
-                <img src="imagens/logo2.png" alt="Emuloteca - Voltar para a página inicial" class="logo-image" width="121" height="120">
+                <img src="imagens/logo2.png" alt="Emuloteca - Voltar para a página inicial" class="logo-image" width="121" height="120" loading="lazy" decoding="async">
             </a>
             <div class="logo-text">Emuloteca</div> 
         </div>
@@ -54,8 +58,8 @@
         <div id="main">
             
             <header class="page-header">
-                <img src="imagens/logo.png" alt="Logo Emuloteca: O Santuário da Emulação Clássica" class="main-logo-image" width="400" height="150">
-                <h1 class="page-header-title"></h1> 
+                <img src="imagens/logo.png" alt="Logo Emuloteca: O Santuário da Emulação Clássica" class="main-logo-image" width="400" height="150" loading="lazy" decoding="async">
+                <h1 class="page-header-title">Emuloteca: O Portal Definitivo do Retrogaming</h1> 
                 <p>Preservando a emoção dos jogos clássicos desde o início.</p>
             </header>
 
@@ -63,6 +67,12 @@
                 <main class="mainContent">
                     
                     <section id="introduction">
+                        <div style="text-align: center; margin-bottom: 25px; padding: 10px 0; border-bottom: 1px solid var(--color-menu-bg);">
+                            <strong style="color: var(--color-highlight);"><span id="display-emuladores">250+</span></strong> Emuladores | 
+                            <strong style="color: var(--color-highlight);"><span id="display-roms">50+</span></strong> Consoles Catalogados | 
+                            <strong style="color: var(--color-highlight);"><span id="display-guides">100+</span></strong> Guias Úteis
+                        </div>
+                        
                         <p style="text-align: left;">
                             Bem-vindo ao Emuloteca, seu portal definitivo para a emulação e jogos clássicos. Mais do que nostalgia, nosso trabalho é um ato vital de preservação digital. Garantimos que obras-primas do NES, SNES, Mega Drive, PS1 e N64 continuem acessíveis, rodando perfeitamente em seu hardware moderno.
                         </p>
@@ -80,12 +90,51 @@
                                     <strong><a href="roms.html" class="link-destaque">Preservação Histórica</a>:</strong> Nossa biblioteca de ROMs e Manuais de Capas é constantemente atualizada para garantir fidelidade à experiência original.
                                 </li>
                             </ul>
-                            <p style="text-align: center; margin-top: 15px;">
-                                Sua jornada de Retrogaming começa aqui. Explore e ajude-nos a manter esta chama acesa!
-                            </p>
+                            <div style="text-align: center; margin-top: 15px;">
+                                <a href="roms.html" class="menu-link-button" style="background-color: var(--color-highlight); color: var(--color-primary); border: 2px solid var(--color-primary); font-weight: bold; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block;">
+                                    🕹️ Comece a Emular Agora!
+                                </a>
+                            </div>
                         </div>
                     </section>
+                    
+                    <section id="popular-games" class="fade-in-element" style="margin-top: 40px;">
+                        <h3>🔥 Jogos Populares no Catálogo</h3>
+                        <p style="text-align: center; font-size: 0.9em; color: #aaa;">Os jogos mais baixados e buscados da semana.</p>
+                        
+                        <div class="game-card-container" style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 15px; margin-top: 20px;">
+                            
+                            <div class="game-card" style="width: 150px; text-align: center; background: var(--color-menu-bg); padding: 10px; border-radius: 5px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                                <a href="roms/zelda-altp.html">
+                                    <img src="imagens/capa-zelda-snes.jpg" alt="Capa The Legend of Zelda: A Link to the Past" class="game-cover" width="130" height="150" style="width: 100%; height: auto; border-radius: 3px; display: block; margin-bottom: 5px;" loading="lazy" decoding="async">
+                                </a>
+                                <p style="font-size: 0.9em; margin: 0; line-height: 1.2;">Zelda: A Link to the Past <span class="badge snes">SNES</span></p>
+                            </div>
+                            
+                            <div class="game-card" style="width: 150px; text-align: center; background: var(--color-menu-bg); padding: 10px; border-radius: 5px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                                <a href="roms/mario64.html">
+                                    <img src="imagens/capa-mario64.jpg" alt="Capa Super Mario 64" class="game-cover" width="130" height="150" style="width: 100%; height: auto; border-radius: 3px; display: block; margin-bottom: 5px;" loading="lazy" decoding="async">
+                                </a>
+                                <p style="font-size: 0.9em; margin: 0; line-height: 1.2;">Super Mario 64 <span class="badge n64">N64</span></p>
+                            </div>
 
+                            <div class="game-card" style="width: 150px; text-align: center; background: var(--color-menu-bg); padding: 10px; border-radius: 5px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                                <a href="roms/ff7.html">
+                                    <img src="imagens/capa-ff7.jpg" alt="Capa Final Fantasy VII" class="game-cover" width="130" height="150" style="width: 100%; height: auto; border-radius: 3px; display: block; margin-bottom: 5px;" loading="lazy" decoding="async">
+                                </a>
+                                <p style="font-size: 0.9em; margin: 0; line-height: 1.2;">Final Fantasy VII <span class="badge ps1">PS1</span></p>
+                            </div>
+                            
+                            <div class="game-card" style="width: 150px; text-align: center; background: var(--color-menu-bg); padding: 10px; border-radius: 5px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+                                <a href="roms/sonic2.html">
+                                    <img src="imagens/capa-sonic2.jpg" alt="Capa Sonic The Hedgehog 2" class="game-cover" width="130" height="150" style="width: 100%; height: auto; border-radius: 3px; display: block; margin-bottom: 5px;" loading="lazy" decoding="async">
+                                </a>
+                                <p style="font-size: 0.9em; margin: 0; line-height: 1.2;">Sonic The Hedgehog 2 <span class="badge md">MD</span></p>
+                            </div>
+                            
+                        </div>
+                    </section>
+                    
                     <section id="ad-unit">
                         <div style="margin: 30px 0; text-align: center;">
                             <ins class="adsbygoogle"
@@ -99,7 +148,7 @@
                         </div>
                     </section>
                     
-                    <section id="featured-article" style="text-align: center;">
+                    <section id="featured-article" class="fade-in-element" style="text-align: center;">
                         <h3>Artigo em Destaque: A Magia da Emulação do SNES</h3>
                         <p style="text-align: left;">
                             A emulação do Super Nintendo Entertainment System (SNES) é uma das áreas mais ricas do universo retrô, com clássicos como Chrono Trigger e The Legend of Zelda: A Link to the Past.
@@ -112,7 +161,7 @@
                         </p>
                     </section>
 
-                    <section id="quick-links" style="margin-top: 40px;">
+                    <section id="quick-links" class="fade-in-element" style="margin-top: 40px;">
                         <h3>O que você busca?</h3>
                         <table class="classic-table rounded" style="width: 100%;">
                             <tbody>
@@ -136,7 +185,7 @@
                         </table>
                     </section>
 
-                    <section id="latest-news" style="margin-top: 40px;">
+                    <section id="latest-news" class="fade-in-element" style="margin-top: 40px;">
                         <h3>Últimas Atualizações</h3>
                         <table class="rounded news-block" style="width: 100%;">
                             <caption class="dateCaption">08 de Novembro de 2025</caption>
@@ -175,6 +224,53 @@
                 </aside>
             </div>
             
+            <section id="mugenteca-promo" class="fade-in-element" style="
+    margin: 40px 0; 
+    border: 3px solid var(--color-highlight); /* Borda laranja/amarela */
+    border-radius: 8px; 
+    padding: 30px 20px; 
+    background-color: var(--color-menu-bg); /* Fundo escuro da barra lateral/menu */
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Sombra suave */
+">
+    <div style="
+        font-family: 'Marmelad', sans-serif; 
+        font-size: 2.2em; 
+        color: var(--color-highlight); /* Título Principal com cor de destaque */
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+    ">
+        ARENA MUGENTECA 
+    </div>
+    
+    <h2 style="color: var(--color-link); margin-top: 0; font-size: 1.5em;">
+        Seu Novo Portal de Jogos de Luta Personalizados
+    </h2>
+    <p style="color: var(--color-text); margin-bottom: 25px;">
+        Cansado de esperar por sequências? No **Mugenteca**, você encontra tudo para criar ou jogar com seus personagens favoritos em batalhas épicas!
+    </p>
+    
+    <div style="margin-bottom: 20px;">
+        <img src="imagens/mugen-banner.png" alt="Portal Mugenteca: Crie e Jogue seus Jogos de Luta" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--color-highlight);">
+    </div>
+    
+    <a href="URL_DO_SEU_SITE_MUGEN" target="_blank" class="menu-link-button" style="
+        background-color: var(--color-link); /* Fundo Azul/Link */
+        color: white; 
+        padding: 12px 30px; 
+        font-size: 1.2em; 
+        font-weight: bold;
+        border: 2px solid var(--color-highlight); /* Borda Externa Laranja/Amarela */
+        border-radius: 5px; 
+        text-decoration: none;
+        transition: background-color 0.3s, transform 0.2s;
+    " onmouseover="this.style.backgroundColor='var(--color-highlight)'; this.style.color='var(--color-primary)'; this.style.transform='scale(1.03)'" onmouseout="this.style.backgroundColor='var(--color-link)'; this.style.color='white'; this.style.transform='scale(1)'">
+        Acesse Mugenteca Agora! 🚀
+    </a>
+    <p style="font-size: 0.8em; color: #aaa; margin-top: 15px;">(O universo MUGEN espera por você em uma nova aba)</p>
+</section>
+
             <footer id="page-footer">
                 <div class="footer-links">
                     <a href="sobre.html">Sobre</a> | 
@@ -187,7 +283,68 @@
     </div>
 
     <script>
-        // Array de Citações Retrô (O script JS está mantido)
+        // Implementação do Menu Toggle (Mobile)
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const sidebar = document.getElementById('sidebar-wrapper');
+            const mainWrapper = document.getElementById('main-wrapper');
+            const isExpanded = this.getAttribute('aria-expanded') === 'true' || false;
+            
+            this.setAttribute('aria-expanded', !isExpanded);
+            sidebar.classList.toggle('open');
+            mainWrapper.classList.toggle('pushed');
+        });
+        
+        // ===================================
+        // ANIMAÇÃO FADE-IN ON SCROLL
+        // ===================================
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Para executar a animação apenas uma vez.
+                    observer.unobserve(entry.target); 
+                }
+            });
+        }, {
+            threshold: 0.2 // O elemento precisa estar 20% visível para disparar
+        });
+
+        // Seleciona todos os elementos com a classe .fade-in-element
+        document.querySelectorAll('.fade-in-element').forEach(element => {
+            observer.observe(element);
+        });
+
+        // ===================================
+        // ATUALIZAÇÃO DE CONTAGEM DE CONTEÚDO (ATUALIZADO PARA GUIAS)
+        // ===================================
+        function updateContentCounts() {
+            // Tenta obter as contagens do localStorage
+            const storedEmuladores = localStorage.getItem('emuladoresCount');
+            const storedRoms = localStorage.getItem('romsCount');
+            const storedGuides = localStorage.getItem('guidesCount'); // NOVO: Contagem de Guias
+            
+            const emuladoresElement = document.getElementById('display-emuladores');
+            const romsElement = document.getElementById('display-roms');
+            const guidesElement = document.getElementById('display-guides'); // NOVO: Elemento do Guia
+
+            // Se o valor estiver no localStorage, injeta no HTML
+            if (storedEmuladores && emuladoresElement) {
+                emuladoresElement.textContent = storedEmuladores;
+            }
+            if (storedRoms && romsElement) {
+                romsElement.textContent = storedRoms;
+            }
+            if (storedGuides && guidesElement) { // NOVO: Atualiza o contador de guias
+                guidesElement.textContent = storedGuides;
+            }
+        }
+        // Chama a função para atualizar as contagens
+        updateContentCounts();
+
+
+        // ===================================
+        // CITAÇÕES RETRÔ
+        // ===================================
         const retroQuotes = [
             { quote: "It's dangerous to go alone! Take this.", source: "The Legend of Zelda (NES)" },
             { quote: "All your base are belong to us.", source: "Zero Wing (Mega Drive)" },
