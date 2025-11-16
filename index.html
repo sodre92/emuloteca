@@ -42,13 +42,14 @@
         </div>
         <nav id="menu" aria-label="Menu principal">
             <ul id="mainMenu" class="menu">
-                <li class="menu"><a href="index.html" class="active"><span aria-hidden="true">🏠</span> Início</a></li>
+                <li class="menu active"><a href="index.html" class="active"><span aria-hidden="true">🏠</span> Início</a></li>
                 <li class="menu"><a href="emuladores.html"><span aria-hidden="true">🕹️</span> Emuladores</a></li>
                 <li class="menu"><a href="roms.html"><span aria-hidden="true">📚</span> Biblioteca ROMs</a></li>
                 <li class="menu"><a href="manuais-capas.html"><span aria-hidden="true">📖</span> Manuais e Capas</a></li>
                 <li class="menu"><a href="guias.html"><span aria-hidden="true">🔧</span> Guias e Tutoriais</a></li>
                 <li class="menu"><a href="traducoes.html"><span aria-hidden="true">📝</span> Traduções</a></li>
                 <li class="menu"><a href="links.html"><span aria-hidden="true">🌐</span> Links Úteis</a></li>
+                <li class="menu"><a href="contato.html">📧 Contato</a></li> <li class="menu"><a href="sobre.html">ℹ️ Sobre Nós</a></li> 
             </ul>
         </nav>
         
@@ -221,56 +222,40 @@
                             </p>
                         </div>
                     </div>
-                </aside>
+                    
+                    <div class="sidebarUnit rounded mugen-ad" style="margin-top: 20px;">
+                        <h3>⭐ MUGENTECA ⭐</h3>
+                        <div style="text-align: center; padding: 10px; background-color: #333; border: 2px dashed #ff8c00;">
+                            <div style="
+                                font-family: 'Marmelad', sans-serif; 
+                                font-size: 1.2em; 
+                                color: var(--color-highlight); 
+                                text-transform: uppercase;
+                                margin-bottom: 5px;
+                            ">
+                                Arena Mugenteca
+                            </div>
+                            <p style="color: white; margin: 0 0 10px 0; font-size: 0.9em;">Seu portal de jogos de luta personalizados!</p>
+                            
+                            <a href="URL_DO_SEU_SITE_MUGEN" target="_blank" class="menu-link-button" style="
+                                background-color: var(--color-link); 
+                                color: white; 
+                                padding: 8px 15px; 
+                                font-size: 1em; 
+                                font-weight: bold;
+                                border: 1px solid var(--color-highlight);
+                                border-radius: 4px; 
+                                text-decoration: none;
+                                display: block;
+                                margin-top: 10px;
+                            ">
+                                Acesse Agora!
+                            </a>
+                        </div>
+                    </div>
+                    </aside>
             </div>
             
-            <section id="mugenteca-promo" class="fade-in-element" style="
-    margin: 40px 0; 
-    border: 3px solid var(--color-highlight); /* Borda laranja/amarela */
-    border-radius: 8px; 
-    padding: 30px 20px; 
-    background-color: var(--color-menu-bg); /* Fundo escuro da barra lateral/menu */
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Sombra suave */
-">
-    <div style="
-        font-family: 'Marmelad', sans-serif; 
-        font-size: 2.2em; 
-        color: var(--color-highlight); /* Título Principal com cor de destaque */
-        text-transform: uppercase;
-        margin-bottom: 10px;
-        letter-spacing: 2px;
-    ">
-        ARENA MUGENTECA 
-    </div>
-    
-    <h2 style="color: var(--color-link); margin-top: 0; font-size: 1.5em;">
-        Seu Novo Portal de Jogos de Luta Personalizados
-    </h2>
-    <p style="color: var(--color-text); margin-bottom: 25px;">
-        Cansado de esperar por sequências? No **Mugenteca**, você encontra tudo para criar ou jogar com seus personagens favoritos em batalhas épicas!
-    </p>
-    
-    <div style="margin-bottom: 20px;">
-        <img src="imagens/mugen-banner.png" alt="Portal Mugenteca: Crie e Jogue seus Jogos de Luta" style="max-width: 100%; height: auto; border-radius: 6px; border: 1px solid var(--color-highlight);">
-    </div>
-    
-    <a href="URL_DO_SEU_SITE_MUGEN" target="_blank" class="menu-link-button" style="
-        background-color: var(--color-link); /* Fundo Azul/Link */
-        color: white; 
-        padding: 12px 30px; 
-        font-size: 1.2em; 
-        font-weight: bold;
-        border: 2px solid var(--color-highlight); /* Borda Externa Laranja/Amarela */
-        border-radius: 5px; 
-        text-decoration: none;
-        transition: background-color 0.3s, transform 0.2s;
-    " onmouseover="this.style.backgroundColor='var(--color-highlight)'; this.style.color='var(--color-primary)'; this.style.transform='scale(1.03)'" onmouseout="this.style.backgroundColor='var(--color-link)'; this.style.color='white'; this.style.transform='scale(1)'">
-        Acesse Mugenteca Agora! 🚀
-    </a>
-    <p style="font-size: 0.8em; color: #aaa; margin-top: 15px;">(O universo MUGEN espera por você em uma nova aba)</p>
-</section>
-
             <footer id="page-footer">
                 <div class="footer-links">
                     <a href="sobre.html">Sobre</a> | 
@@ -321,11 +306,11 @@
             // Tenta obter as contagens do localStorage
             const storedEmuladores = localStorage.getItem('emuladoresCount');
             const storedRoms = localStorage.getItem('romsCount');
-            const storedGuides = localStorage.getItem('guidesCount'); // NOVO: Contagem de Guias
+            const storedGuides = localStorage.getItem('guidesCount'); 
             
             const emuladoresElement = document.getElementById('display-emuladores');
             const romsElement = document.getElementById('display-roms');
-            const guidesElement = document.getElementById('display-guides'); // NOVO: Elemento do Guia
+            const guidesElement = document.getElementById('display-guides'); 
 
             // Se o valor estiver no localStorage, injeta no HTML
             if (storedEmuladores && emuladoresElement) {
@@ -334,7 +319,7 @@
             if (storedRoms && romsElement) {
                 romsElement.textContent = storedRoms;
             }
-            if (storedGuides && guidesElement) { // NOVO: Atualiza o contador de guias
+            if (storedGuides && guidesElement) { 
                 guidesElement.textContent = storedGuides;
             }
         }
