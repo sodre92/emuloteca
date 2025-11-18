@@ -133,6 +133,12 @@ ul, ol {
     color: var(--color-link-hover);
     border-bottom: none;
 }
+.page-header-title {
+    font-size: 2.5em; /* Novo estilo para o H1 */
+    margin-bottom: 5px;
+    color: var(--color-link-hover);
+    border-bottom: none;
+}
 .page-header p {
     font-style: italic;
     color: var(--color-link);
@@ -238,7 +244,7 @@ ul, ol {
 }
 
 
-/* --- Estilos Adicionais (MANTIDO) --- */
+/* --- Estilos Adicionais (CORRIGIDO: menu-link-button) --- */
 
 caption {
     font-size: 1.4em;
@@ -284,20 +290,24 @@ caption {
 .platform-icon:hover {
     opacity: 1;
 }
+
+/* NOVO ESTILO: Diferencia o botão de ação do site dos anúncios */
 .menu-link-button {
     display: inline-block;
     padding: 8px 15px;
-    background-color: var(--color-highlight);
-    color: var(--color-link-hover);
+    /* MUDANÇA: Usando cores fortes (Laranja/Amarelo) para se diferenciar da navegação (Azul) */
+    background-color: #FF8C00; 
+    color: var(--color-primary); /* Texto na cor escura principal */
     border-radius: 4px;
-    border: 1px solid var(--color-link);
+    border: 1px solid #FFD700;
     text-decoration: none;
     font-weight: bold;
 }
 .menu-link-button:hover {
-    background-color: #004488;
+    background-color: #FFA500;
     text-decoration: none;
 }
+
 .roms-list-table {
     width: 100%;
     max-width: 350px;
@@ -546,6 +556,47 @@ body::after {
 }
 
 /* ==================================== */
+/* NOVO ESTILO: Envoltório do Anúncio (Garante a separação visual) */
+/* ==================================== */
+
+.adsense-wrapper {
+    /* Define uma margem clara acima e abaixo */
+    margin: 30px auto; 
+    /* Adiciona uma borda tracejada distinta, diferente da sólida dos links e menus */
+    border: 2px dashed var(--color-link); 
+    /* Coloca um fundo sutilmente diferente */
+    background-color: #000040; 
+    padding: 15px 10px;
+    text-align: center;
+    max-width: 728px; /* Limita a largura */
+    border-radius: 8px;
+}
+.adsense-label {
+    /* Rótulo "Publicidade" */
+    font-size: 0.9em;
+    color: #AAAAAA;
+    margin-bottom: 10px;
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* ==================================== */
+/* CORREÇÃO DE POLÍTICA ADSENSE: ISOLAMENTO */
+/* ==================================== */
+
+/* Força que os links dentro dos blocos de anúncio AdSense NÃO herdem os estilos de menu/links do site,
+   que é o principal motivo da violação de política. */
+.adsbygoogle a, 
+.adsbygoogle a:hover {
+    color: initial !important; /* Retorna à cor padrão de link do Google */
+    text-decoration: initial !important; /* Remove qualquer underline forçada pelo seu CSS */
+    background-color: initial !important; /* Remove qualquer cor de fundo */
+    border: none !important; /* Remove qualquer borda */
+    box-shadow: none !important; /* Remove qualquer sombra */
+}
+
+/* ==================================== */
 /* RESPONSIVIDADE APRIMORADA (Mobile-First) */
 /* ==================================== */
 
@@ -553,6 +604,10 @@ body::after {
     /* OTIMIZAÇÃO: Melhora a legibilidade do texto de cabeçalho em telas pequenas */
     .page-header h2 {
         font-size: 2em;
+    }
+    /* Estilo para o H1 principal */
+    .page-header-title {
+        font-size: 1.8em;
     }
 
     body {
@@ -622,6 +677,14 @@ body::after {
     }
     .mainContent {
         padding: 5px 0;
+    }
+    .game-card-container {
+        /* Permite que apenas 2 ou 3 cards caibam na tela para não esmagar */
+        justify-content: space-between; 
+        gap: 10px;
+    }
+    .game-card {
+        width: 45%; 
     }
 }
 
