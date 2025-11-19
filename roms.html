@@ -33,7 +33,7 @@
             <ul id="mainMenu" class="menu">
                 <li class="menu"><a href="index.html">🏠 Início</a></li>
                 <li class="menu"><a href="emuladores.html">🕹️ Emuladores</a></li>
-                <li class="menu"><a href="roms.html" class="active">📚 Biblioteca ROMs</a></li>
+                <li class="menu active"><a href="roms.html" class="active">📚 Biblioteca ROMs</a></li>
                 <li class="menu"><a href="manuais-capas.html">📖 Manuais e Capas</a></li>
                 <li class="menu"><a href="guias.html">🔧 Guias e Tutoriais</a></li>
                 <li class="menu"><a href="traducoes.html">📝 Traduções</a></li>
@@ -62,6 +62,18 @@
             <div class="content-flex-container">
                 <main class="mainContent" style="flex: 2 1 600px;"> 
                     
+                    <section id="editorial-value" class="fade-in-element" style="margin-bottom: 30px; padding: 15px; border-left: 4px solid var(--color-highlight); background-color: var(--color-menu-bg);">
+                        <h2>A Importância da Preservação e Curadoria Técnica</h2>
+                        <p style="text-align: left;">
+                            Nossa biblioteca não é apenas uma coleção de arquivos, mas um projeto de arquivamento digital baseado em precisão. Trabalhamos com os padrões de auditoria **No-Intro** (para cartuchos) e **Redump** (para mídias de disco, como PS1 e PS2).
+                        </p>
+                        <p style="text-align: left;">
+                            Isso significa que cada arquivo de ROM é verificado por *checksums* (hashes) para garantir que ele é uma cópia **bit-por-bit** idêntica ao original. Este processo elimina *hacks*, *traduções não oficiais*, *demos* e arquivos corrompidos, fornecendo a você a experiência de jogo mais autêntica e estável para a emulação.
+                        </p>
+                        <p style="text-align: left; font-weight: bold; margin-top: 15px;">
+                            <span style="color: var(--color-highlight);">Dica:</span> Se você busca fidelidade, nossos guias explicam como usar *DATs* para verificar seus próprios arquivos.
+                        </p>
+                    </section>
                     <section id="filter-controls" class="sidebarUnit rounded fade-in-element" style="margin-bottom: 20px;">
                         <h3>Filtrar Consoles:</h3>
                         <div id="tag-buttons">
@@ -279,7 +291,6 @@
                     // Ignora a linha de aviso
                     if (row.classList.contains('console-row-warning')) {
                         // Se o filtro for 'all', ou se a linha de aviso contiver o filtro, mostra.
-                        // Caso contrário, trata como console normal para fins de filtro.
                         if (filterTag === 'all' || row.getAttribute('data-tags').includes(filterTag)) {
                             row.style.display = 'table-row';
                         } else {
